@@ -1,0 +1,51 @@
+<!--<div history-detail-js="/shrs_frontend/plugins/slick-1.6.0/slick.js" history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick.css" history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick-theme.css"></div>-->
+<div class="contents bg_contact" ng-controller="historyController">
+  <div class="mar"> 
+    <!--麵包屑-->
+    <div class="nav"><a href="/">首頁</a> > <span class="unit">大事紀</span></div>
+    
+    <!--單元標題-->
+    <div class="maintitle"><i class="fa-solid fa-award"></i>大事紀</div>
+    
+    <!--內文-->
+    <div class="areablock">
+        <!--選擇年份-->
+    	<div class="hisYear">
+        	<div class="btns-left" ng-if="historyYears.length > 5" ng-click="btnsleftClick();"></div>
+            <div class="gridsbox" >
+                <a href="javascript: void(0)" circle-tab-button class="grids hold" ng-click="changeHistoryList('all');">ALL</a>
+                <a href="javascript: void(0)" circle-tab-button class="grids" ng-repeat="historyYear in historyYears" ng-click="changeHistoryList(historyYear.year_show);">
+                    {{ historyYear.year_show }}
+                    <div ng-if="$last" history-detail-js="/shrs_frontend/plugins/check_data/history.js"></div>
+                </a>
+            </div>
+           <div class="btns-right" ng-if="historyYears.length > 5"></div>
+        </div>
+        
+        <!--history-->
+		
+    	<div class="hislistbox">
+            <div class="hislist" ng-repeat="history in historys">
+                <div class="years">{{ history.year }}</div>
+                <div class="texts" ng-bind-html="history.content | toTrusted"></div>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+<!-- slick -->
+<!--<script type="text/javascript" src="/shrs_frontend/plugins/slick-1.6.0/slick.js"></script>-->
+<!--<script type="text/javascript" src="/shrs_frontend/js/app/bower_components/angular-slick/angular-slick.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="/shrs_frontend/plugins/slick-1.6.0/slick.css">-->
+<!--<link rel="stylesheet" type="text/css" href="/shrs_frontend/plugins/slick-1.6.0/slick-theme.css">-->
+<!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>-->
+<!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
+
+<div history-detail-js="/shrs_frontend/plugins/slick-1.6.0/slick.js" history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick.css" history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick-theme.css"></div>
+<!--<div history-detail-js="/shrs_frontend/plugins/slick-1.6.0/slick.js"></div>-->
+<!--<div history-detail-js="/shrs_frontend/js/app/bower_components/angular-slick/angular-slick.js"></div>-->
+<!--<div history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick.css"></div>-->
+<!--<div history-detail-css="/shrs_frontend/plugins/slick-1.6.0/slick-theme.css"></div>-->
+<!--<div history-detail-js="/shrs_frontend/plugins/check_data/history.js"></div>-->

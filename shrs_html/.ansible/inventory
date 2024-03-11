@@ -1,0 +1,8 @@
+[ProductionServers]
+shrs.shu.edu.tw ansible_port=10022 ansible_user=johnny ansible_ssh_private_key_file=~/.ssh/id_rsa_shrs
+
+[StagingServers]
+10.140.0.7 ansible_user=johnny
+
+[all:vars] 
+ansible_remote_tmp=/tmp/.ansible

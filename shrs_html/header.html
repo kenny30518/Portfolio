@@ -1,0 +1,117 @@
+<div base-js="/shrs_frontend/js/base.js"></div>
+<!--<div player-js="/shrs_frontend/js/player.js"></div>-->
+<!--<div player-js="/shrs_frontend/js/app/module/player.js"></div>-->
+<!--header-->
+<div class="header">
+	<div class="mar">
+    	<a href="/" class="logos"><img src="/shrs_frontend/images/layout/logo.png" border="0" /></a>
+        <div class="menu_btn"><span></span><span></span><span></span></div>
+        <div class="menubox">
+            <div class="grids">
+            	<a href="news" class="linktitle">最新消息</a>
+                <div class="ens">News Encyclopedia</div>
+            </div>
+        	<div class="grids">
+            	<a href="javascript: void(0)" class="linktitle arrow">關於本臺</a>
+                <div class="ens">About Us</div>
+          		<div class="dus">
+                	<a href="about" class="lists">電臺簡介</a>
+                    <a href="staff" class="lists">電臺成員</a>
+                    <a href="construct" class="lists">電臺架構</a>
+                    <a href="history" class="lists">大事紀</a>
+                    <!--暫時隱藏<a href="famous" class="lists">本臺傑出校友</a>-->
+                </div>
+            </div>
+            <div class="grids">
+            	<a href="javascript: void(0)" class="linktitle arrow">節目專區</a>
+                <div class="ens">Program Area</div>
+                <div class="dus">
+                	<a href="program/list" class="lists">節目表</a>
+                    <a href="program/select" class="lists">Podcast專區</a>
+                    <!--a href="host" class="lists">主持人專區</a-->
+                </div>
+            </div>
+            <!--div class="grids">
+            	<a href="album" class="linktitle">相簿專區</a>
+                <div class="ens">Album Area</div>
+            </div-->
+            <div class="grids">
+            	<a href="javascript: void(0)" class="linktitle arrow">聽眾服務</a>
+                <div class="ens">Service Area</div>
+                <div class="dus">
+                	<a href="knowledge" class="lists">知識百科</a>
+                    <a href="contact" class="lists">聽眾回饋</a>
+                    <!--a href="link" class="lists">最愛連結</a-->
+                </div>
+            </div>
+            <div class="grids">
+            	<a href="javascript: void(0)" class="linktitle arrow">典藏專區</a>
+                <div class="ens">Contact Us</div>
+                <div class="dus">
+                	<a href="archiveProgram" class="lists">歷屆節目</a>
+                    <a href="archiveHosts" class="lists">歷屆主持人</a>
+                    <a href="archiveTeam" class="lists">歷屆實習團隊</a>
+                    <a href="album" class="lists">活動紀錄</a>
+                    <a href="archiveNews" class="lists">歷史訊息</a>
+                </div>
+            </div>
+            <div class="grids wht">
+            	<a href="javascript: void(0)" class="linktitle arrow">ENGLISH</a>
+          		<div class="dus">
+                	<a href="about/en" class="lists">Shih Hsin Radio Station</a>
+                    <a href="history/en" class="lists">Special Event</a>
+                </div>
+            </div>
+            <!--div class="grids">
+            	<a href="index#applink" class="linktitle">APP下載</a>
+                <div class="ens">APP Download</div>
+            </div-->
+            <button clear-playlist id="clearProgramPlaylist" style="display:none;">Clear Playlist</button>
+            <!--<div class="search">
+            	<div class="inputbox"><input name="search" type="text" placeholder="請輸入關鍵字"></div>
+                <button class="searchbox_btn"></button>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+<!--播放-->
+
+<!--div class="playerbox">
+ <video id="video" style="display:none"></video>
+ <audio id="audio" controls="controls" style="display:none">
+  <source id="audioSource" src="" type="audio/mpeg" />
+Your browser does not support the audio element.
+</audio>
+  <div class="mar" ng-controller="headerPlayerController">
+      <div class="tds-a">
+        <div live-tab-button id="AM-tab" class="channel" ng-click="playVideo('AM')">AM 729</div>
+        <div live-tab-button id="FM-tab" class="channel" ng-click="playVideo('FM')">FM 88.1</div>
+      </div>
+      <div class="tds-b">
+        <div class="phimg"><img id="phimg" src="/shrs_frontend/images/host/default.jpg" border="0" /></div>
+      </div>
+      <div class="tds-c">
+      	<div class="slist-a">
+        	<div class="tds">
+                <div class="whiles no-before" ng-click="playPause()"><span>選擇頻道播放</span></div>
+                <div class="datas" id="pgnameDiv">
+                    <div class="s1"><img src="/shrs_frontend/images/index/icon01.png" border="0" /></div>
+                    <div id="pgname" class="s2"></div>
+                </div>
+                <div class="divider"></div>
+                <div class="datas" id="pgtimeDiv">
+                    <div class="s1"><img src="/shrs_frontend/images/index/icon02.png" border="0" /></div>
+                    <div id="pgtime" class="s2"></div>
+                </div>
+                <div class="datas" id="pghostDiv">
+                    <div class="s1"><img src="/shrs_frontend/images/index/icon03.png" border="0" /></div>
+                    <div id="pghost" class="s2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="pginfo" class="slist-b"></div>
+      </div>
+  </div>
+</div-->

@@ -1,0 +1,177 @@
+<div category-select-js="/shrs_frontend/plugins/check_data/category_select.js"></div>
+<div class="contents bg_contact">
+  <div class="mar" ng-controller="memberController">
+    <!--麵包屑-->
+	<div class="nav"><a href="/">首頁</a> > <span class="unit">電臺成員</span></div>
+
+    <!--單元標題-->
+    <div class="maintitle"><i class="fa-solid fa-user-gear"></i>電臺成員</div>
+
+    <!--分類-->
+    <div class="sort_block">
+      <div class="sort_btn">
+        <div class="btn" style="display:block;"><a href="javascript: void(0)">選擇分類</a></div>
+      </div>
+      <div class="sortbox">
+        <div tab-button class="grids" ng-repeat="categorySelect in categorySelects" ng-if="categorySelect.category_id != 7">
+          <a href="javascript:void(0)" ng-class="($first)?'hold':'';" ng-click="changeCategoryList(categorySelect.category_id);" ng-bind-html="categorySelect.categoryName | toTrusted"></a>
+        </div>
+      </div>
+    </div>
+    
+    <!--詳細-->
+    <div class="indetaile_table" ng-repeat="member in members">
+      <div class="tdimg">
+        <div class="imgs"><img ng-src="{{member.picture}}" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname" ng-bind-html="member.name | toTrusted"></div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>-->
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt" ng-bind-html="member.appellation | toTrusted"></div>
+        </div>
+        <div class="etable mtable">
+          <div style="display: flex;">
+            <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+            <div class="etitle">簡介</div>
+          </div>
+          <div class="etxt" ng-bind-html="member.introduce | toTrusted | nl2br"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img src="/shrs_frontend/images/staff/691205.jpg" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname">吳校長永乾博士</div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt">台長</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt">世新大學創校之初，即以「德智兼修，手腦並用」為校訓，將近一甲子以來，秉持「學校為學生而辦，學生為讀書而來」的辦學理念，從職業學校、專科學校及獨立學院，次第轉型為設有新聞傳播、管理、人文社會和法學等四個學院的綜合大學，累計已為國家培育七萬餘名校友，在各行各業發光發熱。過去十年，面對劇烈變動的高等教育環境，世新大學進一步擬訂發展願景為「建構兼備自由風氣與人文精神之大學，強化教學卓越、厚植研究能量、開拓實踐績效，以培育具有教養、宏觀、專業知能及國際視野之公民」，並於連續十年榮獲教育部評定為「教學卓越」的堅實基礎上，自我定位為一所「精緻的教學卓越大學」。<br>
+
+本人到校服務已屆二十一年，見證了成嘉玲博士、牟宗燦博士及賴鼎銘博士三位校長的卓越領導與治理績效，也完全認同前述世新大學的創立宗旨、辦學理念、發展願景與自我定位。然而，當前高等教育正面臨全球性競爭，以及國內大學校院為數過多，生源卻因少子化而大幅萎縮的嚴峻考驗。在競爭日益激烈的大環境下，國內大學，尤其是資源相對匱乏的私立大學，無不挖空心思尋求創造整體優勢、改善內在劣勢及突破外部危機的良方。有鑑於此，世新大學從九十四學年度開始，陸續擘劃以「塑造優質校園、提升教學品質、厚植研究能量、培養世紀青年」為目標的三期中程校務發展計畫，執行成果並已得到教育主管機關和社會大眾的高度認同。本人接下治理學校的任務後，將從歷任校長所奠立的良好根基出發，依循下列校務發展理念與方針，為世新大學確立及鞏固永續經營的利基。</div>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img src="/shrs_frontend/images/staff/20070628143323_cheng2.jpg" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname">成嘉玲博士</div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt">顧問</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt">世新電台最資深的主持人－－成嘉玲博士早年在台大唸書時，便在世新電台主持節目，對電台，她除了承襲老校長（也是老台長）－－成舍我先生用心擘畫認真經營的精神外，更以經濟學的專才，開闊的胸襟，為世新學子營造新穎、完備、理想又舒適的廣播實務空間。<br>
+「不做二度新鮮人」是她對學生的期許，更是至高的承諾。世新電台今日能擁有AM、FM雙頻道（線上還能收聽收看喔），自動化播出系統及網路電台，熱愛廣播的莘莘學子得以在此幸福地一圓廣播之夢，別忘囉！讓你夢想成真，造就世新電台全方位廣播背後偉大的推手－－前校長成嘉玲博士。</div>
+        </div>
+      </div>
+    </div>
+
+	<div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img src="/shrs_frontend/images/staff/929257.jpg" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname">葉基固主任</div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt">顧問</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt">各大廣播競賽獲獎紀錄輝煌，閃耀著世新人的榮耀。<br>
+「世新廣播電臺」承載著半世紀以來世新人的共同情感，成長茁壯在這無限魅力的廣播世界領域。每年培訓兩百多位全方位的廣播人才，讓不同系所學生皆能跨域學習，經營的特色更獲選傳播媒體界票選第一。<br> 「世新廣播電臺」一年365天、AM729與FM88.1兩個頻道的播出，但我們不以此自滿。我們與時俱進地與自己賽跑，更推出專屬的App，我們正以世新的所學，創造一個屬於自己的時代。</div>
+        </div>
+      </div>
+    </div>
+
+	<div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img src="/shrs_frontend/images/staff/20070628143443_danny3.jpg" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname">莊克仁博士</div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt">顧問</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt">學生口中的肯德雞爺爺，學經歷背景輝煌顯赫。民國80年回世新任教於廣播電視科，現任世新電台顧問、銘傳大學廣電系系主任。他不僅學富五車、見多識廣，也有滿肚子的墨水，教學內容生動活潑觸類旁通，此外也經常創造學生的就業率，為同學提供就業機會，著有傳播科技新論、廣播節目企劃與製作、我國學校實習電台與廣播事業人才培養之研究以及電台經營管理學．．．等書。</div>
+        </div>
+      </div>
+    </div>
+
+	<div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img src="/shrs_frontend/images/staff/20081208164647.jpg" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname">林素蘭老師</div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt">顧問</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt">曾任育達商職國文老師，民國66年返校服務擔任世新印攝科教授國文課程，並且在本台指導學生製作廣播節目，現任世新電台執行秘書。曾經和世新電台結緣的孩子們常說：『電台是我的第二個家』。然而對電台而言，林老師就像是母親一樣，細心呵護、謹慎處理台內要務，一年三百六十五天，她的「心」都留給電台，電台就是她的家。「愛心」、「關心」、「耐心」、「恆心」、「用心」是老師與同事相處、和學生討論廣播節目及生活事務的準則，近卅年如一日！在電台她不僅是一位好老師更是電台家族的好媽媽、好朋友！</div>
+        </div>
+      </div>
+    </div>
+-->
+    
+  </div>
+</div>

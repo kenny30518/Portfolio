@@ -1,0 +1,106 @@
+<div class="contents bg_contact">
+	<div class="mar">
+    	<!--麵包屑-->
+		<div class="nav"><a href="/">首頁</a> > <span class="unit">聽眾回饋</span></div>
+        
+        <!--單元標題-->
+        <div class="maintitle"><i class="fa-solid fa-comments"></i>聽眾回饋</div>
+        
+        <!--問候語-->
+        <h6>聽友對本臺節目有任何的回饋意見，都歡迎留下寶貴建議，讓本台的節目和聽友服務可以更精進、更完美。</h6>
+
+        <!--表單-->
+        <div class="contable" ng-controller="contactController">
+            <form name="contactForm" ng-submit="save()">
+                <!--contact us from SHRS web-->
+                <div class="grids">
+                    <div class="ctable">
+                        <div class="tds-a">姓名</div>
+                        <div class="tds-b">
+                            <!--<input name="YourName" type="text" class="input" placeholder="(必填) 請輸入您的姓名" />-->
+                            <input ng-model="contact.name" class="input" name="contactName" placeholder="(必填) 請輸入您的姓名" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="grids">
+                    <div class="ctable">
+                        <div class="tds-a">暱稱</div>
+                        <div class="tds-b">
+                            <!--<input name="YourNickname" type="text" class="input" placeholder="請輸入您的暱稱" />-->
+                            <input ng-model="contact.nickname" class="input" name="contactNickname" placeholder="請輸入您的暱稱" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grids">
+                    <div class="ctable">
+                        <div class="tds-a">E-mail</div>
+                        <div class="tds-b">
+                            <!--<input name="YourMail" type="text" class="input" placeholder="(必填) 請輸入您的電子信箱" />-->
+                            <input ng-model="contact.email" class="input" name="contactEmail" type="email" placeholder="(必填) 請輸入您的電子信箱" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="grids">
+                    <div class="ctable">
+                        <div class="tds-a">電話</div>
+                        <div class="tds-b">
+                            <!--<input name="YourPhone" type="text" class="input" placeholder="請輸入您的電話" />-->
+                            <input ng-model="contact.tel" class="input" name="contactTel" placeholder="請輸入您的電話" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grids longs">
+                    <div class="cbox">
+                        <div class="tds-a">您的寶貴意見</div>
+                        <div class="tds-b">
+                            <!--<textarea name="message" cols="" rows="" class="textarea"></textarea>-->
+                            <textarea ng-model="contact.content" name="contactContent" cols="" rows="" class="textarea" placeholder="請輸入您的寶貴意見"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!--按鈕-->
+                <div class="sends">
+                    <!--<button class="btns">送出</button>-->
+                    <input type="submit" value="送出" ng-disabled="myForm.$invalid" class="btns">
+                </div>
+            </form>
+            <!--<form name="contactform" action="mailto:shusr@mail.shu.edu.tw?subject=contact us from SHRS web" method="post" enctype="text/plain">-->
+                <!--<div class="grids">-->
+                    <!--<div class="ctable">-->
+                        <!--<div class="tds-a">姓名</div>-->
+                        <!--<div class="tds-b"><input name="YourName" type="text" class="input" placeholder="(必填) 請輸入您的姓名" /></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="grids">-->
+                    <!--<div class="ctable">-->
+                        <!--<div class="tds-a">暱稱</div>-->
+                        <!--<div class="tds-b"><input name="YourNickname" type="text" class="input" placeholder="請輸入您的暱稱" /></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="grids">-->
+                    <!--<div class="ctable">-->
+                        <!--<div class="tds-a">E-mail</div>-->
+                        <!--<div class="tds-b"><input name="YourMail" type="text" class="input" placeholder="(必填) 請輸入您的電子信箱" /></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="grids">-->
+                    <!--<div class="ctable">-->
+                        <!--<div class="tds-a">電話</div>-->
+                        <!--<div class="tds-b"><input name="YourPhone" type="text" class="input" placeholder="請輸入您的電話" /></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="grids longs">-->
+                    <!--<div class="cbox">-->
+                        <!--<div class="tds-a">內容</div>-->
+                        <!--<div class="tds-b"><textarea name="message" cols="" rows="" class="textarea"></textarea></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash;按鈕&ndash;&gt;-->
+                <!--<div class="sends"><button class="btns">送出</button></div>-->
+            <!--</form>-->
+        </div>
+        
+    </div>
+</div>

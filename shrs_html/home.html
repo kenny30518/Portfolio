@@ -1,0 +1,445 @@
+<!--
+<div index-banner-js="/shrs_frontend/js/indexBanner.js" ng-if="adsIndex .length> 0"></div>
+<link href="/shrs_frontend/css/index.css" rel="stylesheet" type="text/css" />
+<div id="topBox" class="bannerbox">
+    <div id="slides" class="banners banner banner_img" style="position:absolute;left:0px;top:0px;width:100%;overflow:hidden;" >
+		<div class="btnleft" ng-if="adsIndex .length> 1"></div>
+		<div class="btnright" ng-if="adsIndex .length> 1"></div>
+		<div class="pointsbox"></div>
+        <ul class="slides-container">
+			<a href="program/list"><li><img src=".\shrs_frontend\images\index\banner_image.jpg" border="0" /></li></a>
+			<a href="{{ ad.link }}" ng-repeat="ad in adsIndex"><li><img ng-src="{{ ad.picture || '/shrs_frontend/images/index/banner.jpg' }}" border="0" /></li></a>
+        </ul>
+    </div>
+</div>
+-->
+
+<section class="banner-text">
+	<img src=".\shrs_frontend\images\index\banner_image.jpg" />
+</section>
+
+<section class="main">
+	<!--最新消息-->
+	<div class="areablock">
+		<div class="maintitle">
+			<div class="maintitle-text">
+				<i class="fa-solid fa-signal"></i>
+				<h4>最新消息</h4><span class="size_s">News</span>
+				<p class="size_s">在第一時間給您最即時的世新廣播大小事</p>
+			</div>
+			<div class="morebox">
+				<a href="news" class="btns">VIEW MORE</a>
+			</div>
+			<!--div class="morebox">
+				<a href="news" class="btns">VIEW MORE</a>
+			</div-->
+		</div>
+		<div class="homeNews rwd-mar">
+			<div ng-repeat="news in newslistIndex" class="newsbox">
+				<div class="newsimage">
+					<img src="{{ news.logo }}" border="0" />
+				</div>
+				<div class="news-content">
+					<h4>{{news.title}}</h4>
+					<p ng-bind-html="news.content"> . . .</p>
+					<div class="date-and-more">
+						<p>{{news.year_show}}.{{news.month_show}}.{{news.day_show}}</p>
+						<a href="news/detail/{{news.news_id}}">MORE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="morebox" id="host-viewmore">
+			<a href="news" class="btns">VIEW MORE</a>
+		</div>
+		
+		<!--精選推薦-->
+		<!--
+		<div class="col-xl-6 col-12">
+			<div class="maintitle">
+				<div class="maintitle-text">
+					<i style="color: red; font-size: 15px; animation: flash 2s infinite;" class="fa-solid fa-circle"></i>
+					<h4>精選推薦</h4><span class="size_s">Featured Recommendation</span>
+					<p class="size_s">精選推薦千萬不能錯過</p>
+				</div>
+				<div class="morebox">
+					<a href="news" class="btns">VIEW MORE</a>
+				</div>
+			</div>
+			<div class="recommand rwd-mar">
+				<div ng-controller="headerPlayerController" class="recommandbox">
+					<div class="recommand-image">
+						<img id="home-phimg" src="" border="0" />
+					</div>
+					<div class="recommand-content">
+						<div class="recommand-title">
+							<i class="fa-solid fa-microphone"></i>
+							<h4 id="home-pgname" class="s2">載入中...</h4>
+						</div>
+						<div class="recommand-title">
+							<i class="fa-solid fa-user"></i>
+							<h4 id="home-pghost" class="s2">載入中...</h4>
+						</div>
+						<div class="recommand-more">
+							<a id="recommand-more" href="">MORE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		-->
+		<!--div class="uls">
+			<div ng-repeat="news in newslistIndex" ng-class="!$first ? 'lis whs-d news' : 'lis whs-c news-main'">
+				<a href="news/detail/{{news.news_id}}" class="a_link">
+					<div class="news_img">
+						<div ng-if="!$first" class="detail"></div>
+						<img ng-src="{{ news.logo }}" border="0" />
+					</div>
+					<div ng-class="!$first ? 'a_text' : 'msktxt'">
+						<div ng-class="!$first ? 'in_titles' : 'mktitle'">{{news.title}}</div>
+						<div ng-class="!$first ? 'in_txt' : 'mktxt'" ng-bind-html="news.content"></div>
+					</div>
+					<div class="mskdate">
+						<div class="grids">
+							<div class="s1">{{news.year_show}}</div>
+							<div class="s2">Year</div>
+						</div>
+						<div class="grids">
+							<div class="s1">{{news.month_show}}</div>
+							<div class="s2">Month</div>
+						</div>
+						<div class="grids">
+							<div class="s1">{{news.day_show}}</div>
+							<div class="s2">Day</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div-->
+	</div>
+
+	<!--節目-->
+	<div class="areablock" ng-controller="homeProgramSelectController">
+		<div class="maintitle">
+			<div class="maintitle-text">
+				<i class="fa-solid fa-microphone"></i>
+				<h4>節目</h4><span class="size_s">Podcast</span>
+			</div>
+
+			<!--選擇類別頁籤-->
+			<!--
+			<div class="sort_block" id="sort">
+				<div class="grids" id="home-pgselector">
+					<a href="javascript: void(0)" class="active knowledge" id="knowledge"
+						ng-click="changeProgramCategoryList('2');"><span>學無止盡</span></a>
+					<a href="javascript: void(0)" class="education" id="education"
+						ng-click="changeProgramCategoryList('3');"><span>青春校園</span></a>
+					<a href="javascript: void(0)" class="music" id="music"
+						ng-click="changeProgramCategoryList('4');"><span>音樂世界</span></a>
+					<a href="javascript: void(0)" class="mental" id="mental"
+						ng-click="changeProgramCategoryList('5');"><span>心靈饗宴</span></a>
+					<a ng-if="!$first" href="javascript: void(0)" class="" ng-click="changeProgramCategoryList(programSelect.category_id);" ng-bind-html="programSelect.categoryName | toTrusted"></a>
+				</div>
+				<div tab-button class="grids">
+					<a href="javascript: void(0)" ng-click="changeProgramCategoryList('programHistory');">歷年節目</a>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<!--手機板選擇類別頁籤-->
+		<!--
+		<div class="sort_block" id="phone-sort">
+			<div class="grids" id="home-pgselector">
+				<a href="javascript: void(0)" class="active knowledge" id="knowledge"
+					ng-click="changeProgramCategoryList('2');"><span>學無止盡</span></a>
+				<a href="javascript: void(0)" class="education" id="education"
+					ng-click="changeProgramCategoryList('3');"><span>青春校園</span></a>
+				<a href="javascript: void(0)" class="music" id="music"
+					ng-click="changeProgramCategoryList('4');"><span>音樂世界</span></a>
+				<a href="javascript: void(0)" class="mental" id="mental"
+					ng-click="changeProgramCategoryList('5');"><span>心靈饗宴</span></a>
+			</div>
+		</div>
+		-->
+
+		<!--節目列表-->
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>精選推薦</h5><span class="size_s">Recommendations</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(1)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==1">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="morebox program-viewmore" onClick="setData(1)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>學無止盡</h5><span class="size_s">Knowledge</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(2)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==2">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="morebox program-viewmore" onClick="setData(2)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>音樂世界</h5><span class="size_s">Music</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(4)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==4">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="morebox program-viewmore" onClick="setData(4)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>趨勢話題</h5><span class="size_s">Trends</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(3)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==3">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="morebox program-viewmore" onClick="setData(3)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>在地深耕</h5><span class="size_s">Community</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(6)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==6">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="morebox program-viewmore" onClick="setData(6)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<div class="pgCategory">
+			<div class="pgCategoryTitle">
+				<h5>人文藝術</h5><span class="size_s">Arts</span>
+			</div>
+			<div class="morebox">
+				<a href="program/select" class="btns" onClick="setData(5)">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="rwd-mar">
+			<div class="areablock">
+				<div class="custom-row" ng-repeat="program in allPrograms" ng-if="program.category_id==5">
+					<div class="programbox col-xl-2 col-md-4 col-sm-6 col-6" ng-repeat="programs in program.programs">
+						<a href="program/detail/{{programs.program_id}}">
+							<div class="program-wrap">
+								<div class="programbox-image">
+									<img ng-src="{{ programs.programPicture }}" border="0">
+								</div>
+								<div class="program-detail">
+									<div class="programbox-name" ng-bind-html="programs.programName | toTrusted"></div>
+									<div class="programbox-hostname" ng-show="{{ programs.programHosts}}"><span ng-repeat="programHost in programs.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="morebox program-viewmore" onClick="setData(5)">
+			<a href="program/select" class="btns">VIEW MORE</a>
+		</div>
+
+		<!--div class="areablock">
+			<div class="uls">
+				<div class="lis whs-b" ng-repeat="program in programs">
+					<a href="program/detail/{{program.program_id}}" class="a_link">
+						<div class="a_img">
+							<div class="detail"></div>
+							<img ng-src="{{ program.programPicture }}" border="0"> </div>
+						<div class="a_text">
+							<div class="mlistitle" ng-bind-html="program.programName | toTrusted"></div>
+							<div class="mlist_a" ng-show="{{ program.programHosts != null && program.programHosts != '' }}"><span ng-repeat="programHost in program.programHosts"><span ng-bind-html="programHost.programHost | toTrusted"></span> </span></span></div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div-->
+
+		<!--div class="uls">
+
+			<div ng-repeat="program in programlistIndex" ng-class="!$first ? 'lis whs-b' : 'lis whs-a other'">
+				<a href="program/detail/{{program.program_id}}" class="a_link">
+					<div class="a_img">
+						<div ng-if="!$first" class="detail"></div>
+						<img ng-src="{{program.programPicture}}" border="0" />
+					</div>
+					<div ng-class="!$first ? 'a_text' : 'msktxt'">
+						<div ng-class="!$first ? 'mlistitle' : 'listsongs'"
+							ng-bind-html="program.programName | toTrusted"></div>
+						<div-- ng-class="!$first ? 'mlist_a' : 'listauthor'"
+							ng-show="{{ program.programHosts != null && program.programHosts != '' }}"><span
+								ng-repeat="programHost in program.programHosts">{{programHost.programHost}}<span>
+								</span></span></div-->
+		<!--<div ng-class="!$first ? 'mlist_b' : 'listdate'">{{program.programTime}}</div>-->
+		<!--div ng-class="!$first ? 'in_txt' : 'mktxt'"
+							ng-bind-html="program.programIntroduction | toTrusted"></!--div>
+					</div>
+				</a>
+			</div>
+
+		</div>-->
+	</div>
+
+	<!--DJ-->
+	<div class="areablock" style="padding-bottom: 50px;">
+		<div class="maintitle">
+			<div class="maintitle-text">
+				<i class="fa-solid fa-user"></i>
+				<h4>主持人</h4><span class="size_s">Host</span>
+				<p class="size_s">最棒的主持人最厲害的DJ</p>
+			</div>
+			<div class="morebox">
+				<a href="host" class="btns">VIEW MORE</a>
+			</div>
+		</div>
+		<div class="row rwd-mar">
+			<div ng-repeat="host in hostlistIndex" class="col-xl-2 col-md-4 col-sm-6 col-6 host">
+				<div class="djimages">
+					<a href="host/detail/{{host.emcee_id}}"><img ng-src="{{host.emceePicture}}" border="0" /></a>
+				</div>
+				<div class="pghost" ng-bind-html="host.name | toTrusted"></div>
+				<div class="pgname">
+					<i class="fa-solid fa-microphone"></i>
+					<div ng-bind-html="host.programName | toTrusted"></div>
+				</div>
+			</div>
+		</div>
+		<div class="morebox" id="host-viewmore">
+			<a href="host" class="btns">VIEW MORE</a>
+		</div>
+	</div>
+
+
+	<!--div class="uls djbox">
+		<div ng-repeat="host in hostlistIndex" class="lis whs-e djs djbox">
+			<a href="host/detail/{{host.emcee_id}}" class="a_link">
+				<div class="djimgs">
+					<img ng-src="{{host.emceePicture}}" border="0" />
+				</div>
+				<div class="djtext">
+					<div class="dj_a" ng-bind-html="host.name | toTrusted"></div>
+					<div class="dj_b" ng-bind-html="host.programName | toTrusted"></div>
+				</div>
+			</a>
+		</div>
+	</div-->
+</section>

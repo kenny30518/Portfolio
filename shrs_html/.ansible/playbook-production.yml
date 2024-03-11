@@ -1,0 +1,31 @@
+---
+- hosts: ProductionServers
+  vars:
+    web_root: "/opt/services/php/webroot/"
+  tasks:
+    - name: Copy files to remote
+      synchronize:
+        src: "{{ playbook_dir }}/../"
+        dest: "{{ web_root }}"
+        archive: no
+        checksum: yes
+        compress: yes
+        copy_links: no
+        times: yes
+        recursive: yes
+        mode: push
+        rsync_opts:
+          - "--exclude=.rsync-filter"
+          - "--exclude=.git"
+      become: yes
+
+    # - name: Change file premissions
+    #   file:
+    #     path: "{{ web_root }}"
+    #     owner: 500
+    #     group: uucp
+    #     recurse: yes
+    #     follow: no
+    #     mode: 02755
+    #     state: directory
+    #   become: yes

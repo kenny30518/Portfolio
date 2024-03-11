@@ -1,0 +1,57 @@
+<div class="contents bg_contact" ng-controller="hostDetailController">
+  <div class="mar"> 
+    <!--麵包屑-->
+	<div class="nav"><a href="/">首頁</a> > <span class="unit">主持人專區</span> > <span class="unit">{{ host.emceeCategory }}</span></div>
+    
+    <!--單元標題-->
+    <div class="maintitle"><i class="fa-solid fa-user"></i>主持人專區</div>
+    
+    <!--詳細-->
+    <div class="indetaile_table">
+      <div class="tdimg">
+        <div class="imgs"><img ng-src="{{host.emceePicture}}" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname" ng-bind-html="host.name | toTrusted"></div>
+          </div>
+          <div class="fblink" ng-if="host.homepage != '' && host.homepage != null "><a href="{{host.homepage}}"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>
+        </div>
+        <div class="etable" ng-repeat="program in host.programs">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon01.png" ng-if="$first"></div>
+          <div class="etitle">{{ $first ? '主持節目' : '' }}</div>
+          <div class="etxt"><a href="program/detail/{{program.programID}}" ng-bind-html="program.programName | toTrusted"></a> ({{program.programTime}} / {{program.emceeCategory}})</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon05.png"></div>
+          <div class="etitle">生日</div>
+          <div class="etxt">{{host.birthday}}</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">星座</div>
+          <div class="etxt">{{host.zodiac}}</div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon07.png"></div>
+          <div class="etitle">E-mail</div>
+          <div class="etxt">{{host.email}}</div>
+        </div>
+        <div class="etable mtable">
+          <div style="display: flex;">
+            <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+            <div class="etitle">簡介</div>
+          </div>
+          <div class="etxt" ng-bind-html="host.introduce | nl2br"></div>
+        </div>
+      </div>
+    </div>
+    
+	<!--回上一頁-->
+    <div class="pageboxs">
+        <a href back-button >Back</a>
+    </div>
+    
+  </div>
+</div>

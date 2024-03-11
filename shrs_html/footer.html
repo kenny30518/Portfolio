@@ -1,0 +1,73 @@
+<div class="footer">
+    <div class="mar">
+        <div class="tab">
+            <div class="left-tab">
+                <div class="tds-a">
+                    <p>地址 / 11604臺北市文山區木柵路一段17巷1號</p>
+                    <p>信箱 / 11699臺北市文山區世新大學郵局第五號信箱<br></p>
+                </div>
+                <div class="tds-a-1">
+                    <p>Email / shusr@mail.shu.edu.tw</p>
+                    <p>電話 / 02-2236-0623 / 02-2236-8225轉84101-84103</p>
+                </div>
+            </div>
+            <div class="right-tab">
+                <div class="tds-b"><img src="/shrs_frontend/images/layout/logo.png" border="0" /></div>
+                <!--i class="fa-brands fa-facebook fa-3x"></i-->
+            </div>
+        </div>
+        <div class="lower-tab">
+            <div class="lower-left-tab">
+                <div>
+                    <a href="https://play.google.com/store/apps/details?id=com.JohnnyWorks.SHRS_Radio&hl=zh-TW" target="_blank"><img src="/shrs_frontend/images/app/p_2013_10_14_16_38_0_24945.png"></a>
+                    <a href="https://itunes.apple.com/tw/app/shi-xin-guang-bo-dian-tai/id685816634?l=zh&mt=8" target="_blank"><img src="/shrs_frontend/images/app/p_2013_10_14_16_39_49_845547.png"></a>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/AM729FM88.1/" target="_blank"><img src="/shrs_frontend/images/index/shrs_facebook.png"></a>
+                </div>
+            </div>
+            <div class="lower-right-tab">
+                <p>建議最佳瀏覽器：IE11、Firefox、Chrome、Safari</p>
+                <p>&#169; 世新廣播電臺 Shih Hsin Radio Station</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    <div class="fb-comments" data-href="https://zh-tw.facebook.com/AM729FM88.1/" data-numposts="5"
+        data-colorscheme="light"></div>
+</div>
+
+<div class="scrollToTop">
+    <i class="fas fa-chevron-circle-up"></i>
+</div>
+
+<div class="floatbox" ng-controller="headerPlayerController">
+    <video id="video" style="display:none"></video>
+    <audio id="audio" controls="controls" style="display:none">
+        <source id="audioSource" src="" type="audio/mpeg" />Your browser does not support the audio element.
+    </audio>
+    <div class="phimg"><img id="phimg" src="images/layout/loading.png" border="0" /></div>
+    <div class="pg-wrap">
+        <div id="pghost" class="s2">載入中...</div>
+        <div class="pgname-wrap">
+            <i class="fa-solid fa-microphone"></i><div id="pgname" class="s2">載入中...</div>
+        </div>
+    </div>
+    <div class="live_listen"><a href="javascript: void(0);" class="onhoverLive"><span>即時收聽</span></a><i style="color: red; font-size: 15px; margin-left: 5px;" class="fa-solid fa-circle"></i></div>
+    <div id="pgtime" class="s2">載入中...</div>
+    <div class="whiles no-before" ng-click="playPause()"><span></span>載入中...</div>
+    <div class="sound-wrap">
+        <i class="fa-solid fa-volume-high"></i><input id="vol-control" type="range" min="0" max="100" step="1" value="70" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+    </div>
+</div>
+<!--右側浮動-->
+<!--
+<div class="floatbox">
+    <a href="javascript: void(0)" class="btns"><img src="/shrs_frontend/images/layout/btn01.jpg" border="0" /></a>
+    <a href="https://www.facebook.com/AM729FM88.1/" class="btns" target="_blank"><img
+            src="/shrs_frontend/images/layout/btn02.jpg" border="0" /></a>
+    <a href="sitemap" class="btns"><img src="/shrs_frontend/images/layout/btn03.jpg" border="0" /></a>
+</div>
+-->

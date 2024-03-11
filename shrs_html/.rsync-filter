@@ -1,0 +1,16 @@
+- .rsync-filter
+- .git
+- .DS_Store
+- ._*
+- .idea
+- .vscode
+- .ansible/
+- .ansible/*
+- .drone.yml
+- .gitignore
+- unit_tests/
+- unit_tests/*
+- *.sql
+- *.md
+- .env
+- storage/*

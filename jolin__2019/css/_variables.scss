@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic);
+$white: #ffffff;
+$red: #990000;
+$pink: #c90b8a;
+$lpink:#b3056a;
+$orange:#ec6a1a;
+$green: #78c350;
+$blue: #2f80c0;
+$lightlblue:#5b75d5;
+$lblue:#4258bc;
+$purple: #8892d6;
+$light: #e2e2e2;
+$lightf:#f2f2f2;
+$grey:#8c8c8c;
+$greye:#eee;
+$grey4:#e4e4e4;
+$dark: #454445;
+//Font Base
+$font-size-base: 16px;
+//RWD sBase
+$xs_sWidth:419px;
+$sm_sWidth:575px;
+$md_sWidth:767px;
+$lg_sWidth:991px;
+$xl_sWidth:1199px;
+//RWD Base
+$xs_Width:420px;
+$sm_Width:576px;
+$md_Width:768px;
+$lg_Width:992px;
+$xl_Width:1200px;
+//小手機0-419
+@mixin xss_rwd() {
+    @media all and (max-width: $xs_sWidth) {
+        @content;
+    }
+}
+
+//小手機0-575
+@mixin xs_rwd() {
+    @media all and (max-width: $sm_sWidth) {
+        @content;
+    }
+}
+
+//小手機420-575
+// @mixin xs_rwd() {
+//     @media all and (min-width: $xs_Width) and (max-width: $sm_sWidth) {
+//         @content;
+//     }
+// }
+//手機767-576
+@mixin sm_rwd() {
+    @media all and (min-width: $sm_Width) and (max-width: $md_sWidth) {
+        @content;
+    }
+}
+
+//小平板768-991
+@mixin md_rwd() {
+    @media all and (min-width: $md_Width) and (max-width: $lg_sWidth) {
+        @content;
+    }
+}
+
+//平板992-1199
+@mixin lg_rwd() {
+    @media all and (min-width: $lg_Width) and (max-width: $xl_sWidth) {
+        @content;
+    }
+}
+
+//電腦
+@mixin xl_rwd() {
+    @media all and (min-width: $xl_Width) {
+        @content;
+    }
+}
+
+//手機768下
+@mixin phone_rwd() {
+    @media all and (max-width: 768px) {
+        @content;
+    }
+}
+
+//手機420下
+@mixin sphone_rwd() {
+    @media all and (max-width: 420px) {
+        @content;
+    }
+}
+
+// forsp平板769-1119
+@mixin spad_rwd() {
+    @media all and (min-width: 769px) and (max-width: 1119px) {
+        @content;
+    }
+}

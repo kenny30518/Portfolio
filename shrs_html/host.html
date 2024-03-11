@@ -1,0 +1,74 @@
+<div host-select-js="/shrs_frontend/plugins/check_data/program_select.js"></div>
+<div class="contents bg_contact" ng-controller="hostController">
+    <link href="/shrs_frontend/css/host.css" rel="stylesheet" type="text/css" />
+  <div class="mar"> 
+    <!--麵包屑-->
+    <div class="nav"><a href="/">首頁</a> > <span class="unit">本年度主持人</span></div>
+    
+    <!--大標-->
+    <div class="titletable">
+      <div class="tds-title"> 
+        <!--單元標題-->
+        <div class="maintitle"><i class="fa-solid fa-user"></i>本年度主持人</div>
+      </div>
+
+        <div class="tds">
+            <div class="searchbox">
+                <div class="td-a">
+                    <input name="search" id="search" type="text" class="inputs" placeholder="請輸入主持人名稱">
+                </div>
+                <div class="td-b">
+                    <button class="buttons" ng-click="search()" id="searchbutton">查詢</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+      <!--分類-->
+      <!--
+      <div class="sort_block">
+          <div class="sort_btn">
+              <div class="btn">
+                  <a href="javascript: void(0)" class="hold" ng-click="changeHostList('now');">本年度主持人</a>
+              </div>
+              <div class="btn">
+                  <a href="javascript: void(0)" ng-click="changeHostList('past');">歷年主持人</a>
+              </div>
+          </div>
+          <div class="sortbox">
+              <div tab-button class="grids">
+                  <a href="javascript: void(0)" class="hold" ng-click="changeHostList('now');">本年度主持人</a>
+              </div>
+              <div tab-button class="grids">
+                  <a href="javascript: void(0)" ng-click="changeHostList('past');">歷年主持人</a>
+              </div>
+              <div class="grids"><a href="#">歷年經典節目</a></div>
+          </div>
+      </div>
+      -->
+
+    <!--列表-->
+    <div class="areablock">
+      <div class="uls djbox">
+
+          <div class="lis whs-e djs djbox" ng-repeat="host in hosts">
+              <a href="host/detail/{{ host.emcee_id }}" class="a_link">
+                  <div class="djimgs">
+                      <div class="detail"></div>
+                      <img ng-src="{{ host.emceePicture }}" border="0"> </div>
+                  <div class="djtext">
+                      <div class="dj_a" ng-bind-html="host.name | toTrusted"></div>
+                      <div class="hostPgName">
+                        <i class="fa-solid fa-microphone"></i><div class="dj_b">{{ host.programName }}</div>
+                      </div>
+                      <!--<div class="mlist_b">{{ host.programTime }}</div>-->
+                  </div>
+            </a>
+          </div>
+		
+      </div>
+        <a class="loadmore" href="javascript:void(0)" ng-click="loadMore()" ng-if="loadshow">觀看更多</a>
+    </div>
+  </div>
+</div>

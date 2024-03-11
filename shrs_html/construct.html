@@ -1,0 +1,113 @@
+<div class="contents bg_contact">
+  <div class="mar"> 
+    <!--麵包屑-->
+    <div class="nav"><a href="/">首頁</a> > <span class="unit">電臺架構</span></div>
+    
+    <!--單元標題-->
+    <div class="maintitle"><i class="fa-solid fa-sitemap"></i>電臺架構</div>
+
+    <style>
+      .construct-img{ height: auto; max-width: 100%; }
+      h4 { color: #3B4249; }
+      .text { text-align: left; }
+      .text p { margin-bottom: 10px; line-height: 35px; }
+      .text li { font-weight: 500; }
+      .indent { margin-left: 2em; margin-top: 1em; }
+      .adjust_sec_line_indent { text-indent: -7.4em; margin-left: 7.4em; }
+      .icon_adjust { display: flex; align-items: baseline; }
+      .construct-img .text { text-align: center!important; }
+      @media screen and (max-width:767px){
+        .construct-img { height: auto; max-width: 90% !important; }
+        .adjust_sec_line_indent { text-indent: 0em; margin-left: 0em; }
+        .adjust_sec_line_indent span { display: grid; }
+      }
+    </style>
+    <!--內文-->
+    <div class="areablock"  ng-controller="constructController">
+      <div class="text">
+        <div class="construct-img" ng-bind-html="construct"></div>
+      </div>
+      <!--
+      <h3>世新電臺各部門職掌</h3><br>
+      <div class="t_list">
+        <div class="text">
+          <div class="t_list">
+            <h4><li>實習主管：</li></h4>
+            <div class="indent">
+              <p>實習臺長一名、實習副臺長三名，於電臺正式錄取的實習學生中公開徵選。</p>
+              <h5><i class="fa-solid fa-user"></i>實習臺長：</h5>
+              <p class="indent">在臺長和電臺老師的指導下，擬定營運方針，管理各部門業務。</p>
+              <h5><i class="fa-solid fa-user"></i>實習副臺長：</h5>
+              <p class="indent">協助實習臺長管理各項業務，分工直轄部門，並督導、追蹤各部門業務執行進度。</p>
+            </div>
+          </div>
+
+          <div class="t_list">
+            <h4><li>實習組員：</li></h4>
+            <div class="indent">每學年錄取之節目主持人皆有義務擔任實習組員，加入各部門進行經營管理與值班實習，可視實際營運需要再招募本校大二及大三優秀學生加入實習團隊。</div>
+          </div>
+          
+          <h4><li>部門：</li></h4>
+          <div class="indent">
+            <div class="t_list">
+              <h5><i class="fa-solid fa-building-user"></i>創意行銷部：</h5>
+              <div class="indent">
+                <p>設置部長一名，綜理電臺對內及對外宣傳，經營管理粉絲專頁及各影音宣傳管道，統籌辦理電臺活動與外賓參訪行程，完成宣傳活動成效分析與成果報表，辦理創意行銷部培訓課程與考核等相關事項。</p>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">活動企劃組：<span>規劃電臺年度各項宣傳活動企劃與進度管控，安排外賓參訪流程與相關事宜，製作活動執行成效分析與成果報告。</span></p>
+                </div>  
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">社群行銷組：<span>負責電臺官方網站、粉絲專頁與各影音宣傳管道之經營維護。業務包含製作電臺官網與校網最新消息圖文、粉絲與影音宣傳專頁宣傳圖文、更新多媒體播放器推播模板。</span></p>
+                </div>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">公關宣傳組：<span>擔任電臺對內與對外聯繫窗口，執行活動企畫組規劃之電臺活動，電臺節目宣傳與撰寫媒體公關稿，電臺雙週報編撰製作與新聞稿撰寫，聽友意見回覆。</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="t_list">
+              <h5><i class="fa-solid fa-building-user"></i>管理部：</h5>
+              <div class="indent">
+                <p>設置部長一名，綜理電臺人才招募、人力資源管理、與節目部一同落實獎懲制度、電臺資料管理、辦理管理部培訓課程與考核等相關事項。</p>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">人力資源組：<span>每年辦理實習經營幹部招募、舉辦候選人政見發表會及投票；新聲代主持人及實習組員招募企劃、執行與培訓，安排電臺實習團隊每月值班表，執行人員獎懲與淘汰管理，管理電臺內部資料、物品採購等。</span></p>
+                </div>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">數據管理組：<span>負責管裡電臺官網所有節目和訊息內容之正確性和後臺數據統計，Podcast排行榜數據整理與運作，每月匯整電臺所有數據（包括：官網、合作平台、各影音粉專等），進行數據整理匯報與檢討，提供創意行銷部規劃調整依據，以及人力資源組及節目部獎懲依據，協助落實本臺淘汰機制，協助主持人於Sound On及合作平台與電臺官網後台審查監督、數據整理、每月報表製作等。</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="t_list">
+              <h5><i class="fa-solid fa-building-user"></i>工程部：</h5>
+              <div class="indent">
+                <p>設置部長一名，綜理電臺軟硬體設備管理與保養、設備定期檢測與基礎維護、電臺環境整潔之維護、官網操作異常狀況通報、辦理工程部培訓課程與考核等相關事項。</p>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">設備教學組：<span>主要負責進行電臺新進實習夥伴與新聲代主持人錄音室軟硬體操作教學，編寫錄音室軟硬體教學教材，協助排除錄音室危機狀況。</span></p>
+                </div>
+                <div class="icon_adjust">
+                  <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">器材維護組：<span>負責電臺環境維護與美化、整理各大錄音室環境、軟硬體設備保養清潔與使用管理。負責電臺辦公室與各大錄音室本機電腦資料定期整理，如：本地錄音工作室資料夾、桌面檔案、rec share空間、官網功能正常運作等。</span></p>
+                </div>
+              </div>
+            </div>
+
+            <h5><i class="fa-solid fa-building-user"></i>節目部：</h5>
+            <div class="indent">
+              <p>設置部長一名，負責電臺主動規劃之本校系所專業知識節目企劃，擔任製作人籌組專業製作團隊，協助系所完成高質量的節目製播；負責新聞訪談類相關節目企劃製作；每年辦理新進主持人節目企畫徵選，落實審聽作業，執行節目品管，辦理節目獎懲與淘汰事宜。</p>
+              <div class="icon_adjust">
+                <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">節目企劃組：<span>規劃每年度各類節目比例與排檔策略，審理新聲主持人投遞之各節目企劃書；提出本校系所專業知識節目企劃，籌組團隊完成製播；提供各系所專業節目企製協助；更新後台節目表與各大節目與主持人資料，持續追蹤主持人按時更新以及確認所有內容的正確性。</span></p>
+              </div>
+              <div class="icon_adjust">
+                <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">節目編審組：<span>完成每週抽檢節目審聽作業，公告各節目聽審結果，輔導主持人精進節目品質與節目宣傳，主辦本臺節目獎勵活動與淘汰機制。</span></p>
+              </div>
+              <div class="icon_adjust">
+                <i class="fa-solid fa-star"></i><p class="adjust_sec_line_indent">新聞編播組：<span>負責新聞類與訪談類節目企製、電臺5分鐘新聞排播。</span></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>

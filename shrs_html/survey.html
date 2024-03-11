@@ -1,0 +1,84 @@
+<!--線上調查-->
+<div id="voteBlock" class="areablock" ng-class="voteShow?'':'hide'">
+    <div class="maintitle">
+        <div class="icons icon_e">
+            <div class="lines"></div>
+        </div>線上調查 <span class="size_s">Online survey</span>
+    </div>
+    <div class="maintxt">大家的意見就是世新廣播電臺的動力!!</div>
+    <div class="surveytopic">Q : {{votes.question}}</div>
+    <div id="voteItem">
+        <form action="">
+            <div class="surveybox">
+                <div vote-item-button name="answer1" class="options">{{votes.option1}}</div>
+                <div vote-item-button name="answer2" class="options">{{votes.option2}}</div>
+                <div vote-item-button name="answer3" class="options">{{votes.option3}}</div>
+                <div vote-item-button name="answer4" class="options">{{votes.option4}}</div>
+
+                <!--<div vote-item-button name="answer1" class="options">多元豐富的音樂與歌曲</div>-->
+                <!--<div vote-item-button name="answer2" class="options">活力充沛的主持DJ群</div>-->
+                <!--<div vote-item-button name="answer3" class="options">沒有廣告打擾的優質收聽</div>-->
+                <!--<div vote-item-button name="answer4" class="options">提供多語言的國際廣播節目</div>-->
+            </div>
+            <div class="surveybtn">
+                <!--<a href="#" class="btns_a">送出</a>-->
+                <!--<a href="javascript: void(0)" class="btns_b" onclick="showVoteResult()">送出看結果</a>-->
+                <a href="javascript: void(0)" class="btns_b" ng-click="showVoteResult(votes)">送出看結果</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="voteResult" style="width:75%; display:none;">
+        <div class="maintxt">
+            {{votes.option1}}
+            <small class="pull-right">{{votes.answer1}}</small>
+        </div>
+        <div class="progress xs">
+            <div class="progress-bar progress-bar-primary"
+                style="width: {{ votes.total_count == 0 ? 0 : votes.answer1/votes.total_count*100 }}%"
+                role="progressbar"
+                aria-valuenow="{{ votes.total_count == 0 ? 0 : votes.answer1/votes.total_count*100 }}" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            <!--<div class="progress-bar progress-bar-primary" style="width: 38.24200913242%" role="progressbar" aria-valuenow="38.24200913242" aria-valuemin="0" aria-valuemax="100"></div>-->
+        </div>
+
+        <div class="maintxt">
+            {{votes.option2}}
+            <small class="pull-right">{{votes.answer2}}</small>
+        </div>
+        <div class="progress xs">
+            <div class="progress-bar progress-bar-aqua"
+                style="width: {{ votes.total_count == 0 ? 0 : votes.answer2/votes.total_count*100 }}%"
+                role="progressbar"
+                aria-valuenow="{{ votes.total_count == 0 ? 0 : votes.answer2/votes.total_count*100 }}" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            <!--<div class="progress-bar progress-bar-aqua" style="width: 29.908675799087%" role="progressbar" aria-valuenow="29.908675799087" aria-valuemin="0" aria-valuemax="100"></div>-->
+        </div>
+
+        <div class="maintxt">
+            {{votes.option3}}
+            <small class="pull-right">{{votes.answer3}}</small>
+        </div>
+        <div class="progress xs">
+            <div class="progress-bar progress-bar-green"
+                style="width: {{ votes.total_count == 0 ? 0 : votes.answer3/votes.total_count*100 }}%"
+                role="progressbar"
+                aria-valuenow="{{ votes.total_count == 0 ? 0 : votes.answer3/votes.total_count*100 }}" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            <!--<div class="progress-bar progress-bar-green" style="width: 14.954337899543%" role="progressbar" aria-valuenow="14.954337899543" aria-valuemin="0" aria-valuemax="100"></div>-->
+        </div>
+
+        <div class="maintxt">
+            {{votes.option4}}
+            <small class="pull-right">{{votes.answer4}}</small>
+        </div>
+        <div class="progress xs">
+            <div class="progress-bar progress-bar-yellow"
+                style="width: {{ votes.total_count == 0 ? 0 : votes.answer4/votes.total_count*100 }}%"
+                role="progressbar"
+                aria-valuenow="{{ votes.total_count == 0 ? 0 : votes.answer4/votes.total_count*100 }}" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            <!--<div class="progress-bar progress-bar-yellow" style="width: 16.89497716895%" role="progressbar" aria-valuenow="16.89497716895" aria-valuemin="0" aria-valuemax="100"></div>-->
+        </div>
+    </div>
+</div>

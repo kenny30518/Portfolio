@@ -1,0 +1,80 @@
+
+<div class="contents bg_contact" ng-controller="albumDetailController">
+    <div class="mar">
+        <!--麵包屑-->
+        <div class="nav"><a href="#">首頁</a> > 相簿專區 > <span class="unit">{{album.albumName}}</span></div>
+
+        <!--單元標題-->
+        <div class="maintitle"><i class="fa-solid fa-camera-retro"></i>相簿介紹</div>
+
+        <!--主題-->
+        <div class="albtitle">{{album.albumName}}</div>
+        <div class="newsdecontent" ng-bind-html="album.description | toTrusted" style="color:#ccc;"></div>
+
+        <div class="areablock" >
+            <div class="uls">
+
+                <!--<div class="lis whs-e alb" ng-repeat="picture in pictures">-->
+                    <!--<a class="sb" href="{{picture.filename}}" title="{{picture.name}}" >-->
+                        <!--<div class="a_img">-->
+                            <!--<div class="detail"></div>-->
+                            <!--<img ng-src="{{picture.filename}}" border="0">-->
+                        <!--</div>-->
+                        <!--<div class="a_text">-->
+                            <!--<div class="in_txt_alb">{{picture.name}}</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<div style="diplay:none" ng-if="$last" album-detail-css="/shrs_frontend/plugins/smoothbox/css/smoothbox.css" album-detail-js="/shrs_frontend/plugins/smoothbox/js/smoothbox.min.js"></div>-->
+                <!--</div>-->
+
+                <div class="lis whs-e alb" ng-repeat="picture in pictures">
+                    <a class="lightbox-image-link" href="{{picture.filename}}" data-lightbox="lightbox-set" data-title="{{picture.name}}" style="width: 100%;">
+                        <div class="a_img">
+                            <div class="detail"></div>
+                            <img class="lightbox-image" ng-src="{{picture.filename}}" alt="{{picture.name}}"/>
+                        </div>
+                        <div class="a_text">
+                            <div class="in_txt_alb">{{picture.name}}</div>
+                        </div>
+                    </a>
+                    <div ng-if="$last" style="display:none" album-detail-css="/shrs_frontend/plugins/lightbox/css/lightbox.css" album-detail-js="/shrs_frontend/plugins/lightbox/js/lightbox.js"></div>
+                </div>
+
+            </div>
+        </div>
+        <!--列表-->
+        <!--<div class="areablock" >-->
+            <!--<div class="uls">-->
+                <!--<div class="lis whs-e alb" ng-repeat="picture in data.picture">-->
+                    <!--<a class="sb" href="{{picture.url}}" >-->
+                        <!--<div class="a_img">-->
+                            <!--<div class="detail"></div>-->
+                            <!--<img ng-src="{{picture.url}}" border="0">-->
+                        <!--</div>-->
+                        <!--<div class="a_text">-->
+                            <!--<div class="in_txt_alb">{{picture.name}}</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <!--頁碼-->
+        <!--<div class="pageboxs">-->
+            <!--<a href="#" class="first"><div class="s"></div><div class="arrow"></div></a>-->
+            <!--<a href="#" class="hold">1</a>-->
+            <!--<a href="#">2</a>-->
+            <!--<a href="#">3</a>-->
+            <!--<a href="#">4</a>-->
+            <!--<a href="#" class="last"><div class="arrow"></div><div class="s"></div></a>-->
+            <!--<a href="album.html">Back</a>-->
+        <!--</div>-->
+        <!--回上一頁-->
+        <div class="pageboxs">
+            <a ng-click="First()" class="first" href="javascript:void(0);"><div class="s"></div><div class="arrow"></div></a>
+            <a ng-repeat="page in pageList" ng-click="selectPage(page)" ng-class="{hold: isActivePage(page)}" href="javascript:void(0);">{{ page }}</a>
+            <a ng-click="Last()" class="last" href="javascript:void(0);"><div class="arrow"></div><div class="s"></div></a>
+            <a href back-button >Back</a>
+        </div>
+    </div>
+</div>

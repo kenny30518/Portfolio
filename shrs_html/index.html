@@ -1,0 +1,121 @@
+<!doctype html>
+<html ng-app="shrsApp">
+  <head>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8" name="viewport">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>世新廣播電臺網站</title>
+	<link rel="shortcut icon" href="/shrs_frontend/favicon.ico" type="image/x-icon">
+	<base href="/">
+
+	<!--font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+	<!-- Angular -->
+    <script src="/shrs_frontend/js/app/bower_components/angular/angular.min.js"></script>
+	
+	<!-- JQuery -->
+	<script type="text/javascript" src="/shrs_frontend/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+	
+	
+	<script src="/shrs_frontend/js/app/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="/shrs_frontend/js/app/app.module.js"></script>
+	<script src="/shrs_frontend/js/app/app.config.js"></script>
+	<script src="/shrs_frontend/js/app/module/index.js"></script>
+	<script src="/shrs_frontend/js/app/module/home.js"></script>
+	<script src="/shrs_frontend/js/app/module/program_list.js"></script>
+	<script src="/shrs_frontend/js/app/module/program_select.js"></script>
+	<script src="/shrs_frontend/js/app/module/archive_program.js"></script>
+	<script src="/shrs_frontend/js/app/module/program_detail.js"></script>
+	<script src="/shrs_frontend/js/app/module/about.js"></script>
+	<script src="/shrs_frontend/js/app/module/staff.js"></script>
+	<script src="/shrs_frontend/js/app/module/album.js"></script>
+	<script src="/shrs_frontend/js/app/module/album_detail.js"></script>
+	<script src="/shrs_frontend/js/app/module/link.js"></script>
+	<script src="/shrs_frontend/js/app/module/knowledge.js"></script>
+	<script src="/shrs_frontend/js/app/module/knowledge_detail.js"></script>
+	<script src="/shrs_frontend/js/app/module/contact.js"></script>
+	<script src="/shrs_frontend/js/app/module/construct.js"></script>
+
+	<script src="/shrs_frontend/js/app/module/hosts.js"></script>
+	<script src="/shrs_frontend/js/app/module/archive_hosts.js"></script>
+	<script src="/shrs_frontend/js/app/module/hostDetail.js"></script>
+	<script src="/shrs_frontend/js/app/module/history.js"></script>
+	<script src="/shrs_frontend/js/app/module/history_en.js"></script>
+	<script src="/shrs_frontend/js/app/module/news.js"></script>
+	<script src="/shrs_frontend/js/app/module/news_detail.js"></script>
+	<script src="/shrs_frontend/js/app/module/player.js"></script>
+
+	<!-- InstanceEndEditable -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!--link href="/shrs_frontend/css/bootstrap.min.css" rel="stylesheet" type="text/css" /-->
+	<link href="/shrs_frontend/css/layout.css" rel="stylesheet" type="text/css" />
+	<!-- InstanceBeginEditable name="head" -->
+	<link href="/shrs_frontend/css/index.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/contact.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/about.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/host.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/news.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/program.css" rel="stylesheet" type="text/css" />
+	<link href="/shrs_frontend/css/progress.css" rel="stylesheet" type="text/css" />
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>-->
+	<script type="text/javascript" src="/shrs_frontend/js/hls.min.js"></script>
+	<script type="text/javascript" src="/shrs_frontend/js/playBoxScroll.js"></script>
+
+	  <!--FB-->
+	  <!--<script src="https://connect.facebook.net/zh_TW/all.js"></script>-->
+	  <!--<script src="https://connect.facebook.net/zh_TW/sdk.js"></script>-->
+	  <script src="/shrs_frontend/js/app/bower_components/angularjs-facebook-sdk/dist/angularjs-facebook-sdk.js"></script>
+	  <script src="https://pc035860.github.io/angular-easyfb/angular-easyfb.min.js"></script>
+
+	<!--audio-->
+	  <script src="/shrs_frontend/js/app/bower_components/angular-soundmanager2/dist/angular-soundmanager2.js"></script>
+	  <!--<script type="text/javascript" src="/shrs_frontend/plugins/audiojs/audio.min.js"></script>-->
+	  <!--<script>-->
+          <!--audiojs.events.ready(function() {-->
+              <!--var as = audiojs.createAll();-->
+          <!--});-->
+	  <!--</script>-->
+
+	  <script type="text/javascript" src="/shrs_frontend/plugins/slick-1.6.0/slick.js"></script>
+	  <!--<script type="text/javascript" src="/shrs_frontend/js/app/bower_components/angular-slick/angular-slick.js"></script>-->
+	  <link rel="stylesheet" type="text/css" href="/shrs_frontend/plugins/slick-1.6.0/slick.css">
+	  <link rel="stylesheet" type="text/css" href="/shrs_frontend/plugins/slick-1.6.0/slick-theme.css">
+
+	<!-- superslides
+	<script src="scripts/superslides/jquery.easing.1.3.js" type="text/javascript"></script> -->
+	<script src="/shrs_frontend/plugins/superslides/jquery.animate-enhanced.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/shrs_frontend/plugins/superslides/jquery.hammer.min.js"></script>
+	<script src="/shrs_frontend/plugins/superslides/dist/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+
+	<!--icon-->
+	<script src="https://kit.fontawesome.com/4757d8bb39.js" crossorigin="anonymous"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+    {{ Html::script("https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js")}}
+    {{ Html::script("https://oss.maxcdn.com/respond/1.4.2/respond.min.js")}}
+	<![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJL29EYELQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-NJL29EYELQ');
+	</script>
+
+  </head>
+  <body ng-controller="indexController">
+	<div header class="header"></div>
+
+	<div ng-view autoscroll="true"></div>
+
+	<div footer ></div>
+</body>
+</html>

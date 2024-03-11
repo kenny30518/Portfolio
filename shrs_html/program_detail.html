@@ -1,0 +1,144 @@
+<div class="contents bg_contact" ng-controller="programDetailController">
+    <div class="mar">
+        <!--麵包屑-->
+        <div class="nav"><a href="#">首頁</a> > <a href="/program/select" class="unit">Podcast專區</a> > <span class="unit">{{ data.programCategory }}</span></div>
+
+        <!--單元標題-->
+        <div class="maintitle"><i class="fa-solid fa-microphone"></i>節目介紹</div>
+
+        <!--介紹-->
+        <div class="indetaile_table">
+            <div class="tdimg">
+                <div class="imgs"><img src="{{data.programPicture}}" border="0" /></div>
+            </div>
+            <div class="tddata">
+                <div class="etable">
+                    <div class="eicon">
+                        <div class="icon-a"><img src="/shrs_frontend/images/index/icon01.png" /></div>
+                    </div>
+                    <div class="etxt">
+                        <div class="title" ng-bind-html="data.programTitle | toTrusted"></div>
+                    </div>
+                </div>
+                <div class="etable">
+                    <div class="eicon"><img src="/shrs_frontend/images/index/icon03.png" /></div>
+                    <div class="etitle">主持人</div>
+                    <div class="etxt"><div ng-repeat="programHost in data.programHosts"><a href="host/detail/{{ programHost.programHostID }}" ng-bind-html="programHost.programHost | toTrusted"></a> ({{ programHost.programHostCategory }})</div></div>
+                </div>
+                <div class="etable">
+                    <div class="eicon"><img src="/shrs_frontend/images/index/icon02.png" /></div>
+                    <div class="etitle">節目時段</div>
+                    <div class="etxt"><div ng-repeat="programPlayTime in data.programPlayTimes">{{ programPlayTime.programPlayTime }}</div></div>
+                </div>
+                <div class="etable mtable">
+                    <div style="display: flex;">
+                        <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png" /></div>
+                        <div class="etitle">節目介紹</div>
+                    </div>
+                    <div class="etxt" ng-bind-html="data.programIntroduction"></div>
+                </div>
+
+                <div ng-if="data.soundsShow">
+                    <sound-manager></sound-manager>
+                    <p style="color: #3B4249">
+                        節目: {{ currentPlaying.title }} ({{ currentPostion }} / {{ currentDuration }})
+                    </p>
+                    <button play-music class="fa fa-play"></button>
+                    <button pause-music class="fa fa-pause"></button>
+                    <button stop-music class="fa fa-stop"></button>
+                    <li>
+                        <div class="seekBase" seek-track>
+                            <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+                        </div>
+                    </li>
+                </div>
+
+            </div>
+        </div>
+
+        <!--節目日誌-->
+        <div class="elog" ng-show="programJournals != '' && programJournals != null">
+            <div class="titles">節目日誌</div>
+
+            <!--1則-->
+            <div class="loglist" ng-repeat="programJournal in programJournals">
+                <div class="playicon"></div>
+                <div class="ftxtable">
+                    <div class="fdate">{{programJournal.programJournalDate}}</div>
+                    <div class="ftitle" ng-bind-html="programJournal.programJournalTitle | toTrusted"></div>
+                    <div style="float:right;" ng-if="programJournal.programMp3.url"><button music-player="play" add-song="programJournal.programMp3" name="playerJournal" class="fa fa-volume-up"></button></div>
+                    <div style="float:right; padding-right: 15px;" ng-if="programJournal.programJournalUrl != 'http://' && programJournal.programJournalUrl != null"><a href="{{ programJournal.programJournalUrl }}" target="_blank" style="color:#ca1f1f;"><div id="urlJournal" class="fa fa-play" style="width: 40px; height: 25px; border-radius: 10px; background-color: white; padding-top: 4px; padding-left: 15px;"></div></a></div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="ntxt">
+                    <div class="imgs"><img ng-src="{{ programJournal.programJournalLogo }}" style="float:left;width: 100%;height: 100%;margin-right: 10px;"></div>
+                    <span ng-bind-html="programJournal.programJournal"></span>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+            <!--頁碼-->
+            <div class="pageboxs">
+                <a ng-click="First()" class="first" href="javascript:void(0);"><div class="s"></div><div class="arrow"></div></a>
+                <a ng-repeat="page in pageList" ng-click="selectPage(page)" ng-class="{hold: isActivePage(page)}" href="javascript:void(0);">{{ page }}</a>
+                <a ng-click="Last()" class="last" href="javascript:void(0);"><div class="arrow"></div><div class="s"></div></a>
+            </div>
+        </div>
+
+        <!--節目粉絲團-->
+        <div class="clubbox" ng-show="data.facebookUrl">
+            <div class="club_table">
+                <div class="tds-a">
+                    <div class="fbbg">
+                        <iframe ng-src="{{ data.facebookPost | trustAsResourceUrl }}" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                </div>
+                <div class="tds-s"></div>
+                <div class="tds-b">
+                    <div class="fbbg">
+                        <!--<afb:comments href="{{ data.facebookUrl | trustAsResourceUrl }}" width="500" numposts="5" colorscheme="light" on-comment-created="onCommentCreated(href, commentID, parentCommentID);" on-comment-removed="onCommentRemoved(href, commentID, parentCommentID);"></afb:comments>-->
+                        <div class="fb-comments" data-href="{{ data.facebookUrl | trustAsResourceUrl }}" data-numposts="5" data-colorscheme="light"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--回上一頁-->
+    <div class="pageboxs">
+        <a href back-button >Back</a>
+    </div>
+</div>
+
+<div program-detail-js="/shrs_frontend/plugins/check_data/program_detail.js"></div>
+
+<style>
+    .seekBase {
+        height: 7px;
+        width: 90%;
+        border: 1px solid #cccccc;
+    }
+    .seekLoad {
+        height: 5px;
+        width: 0;
+        background-color: #f62356;
+    }
+
+    li {
+        cursor: pointer;
+    }
+
+    button {
+        display:inline-block;
+        background-color: #f65580;
+        font-size:17px;
+        font-weight:bold;
+        color:#fff;
+        padding:2px 10px;
+        border-radius:4px;
+        -webkit-border-radius:4px;
+        -moz-border-radius:4px;
+        cursor:pointer;
+        margin:0 15px 0 0;
+    }
+
+</style>

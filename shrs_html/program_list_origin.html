@@ -1,0 +1,63 @@
+<div program-select-js="/shrs_frontend/plugins/check_data/program_select.js"></div>
+<!--content-->
+<!-- InstanceBeginEditable name="EditRegion1" -->
+<div class="contents bg_contact" ng-controller="ProgramListController">
+  <div class="mar"> 
+    <!--麵包屑-->
+    <div class="nav"><a href="#">首頁</a> > <span >節目表</span></div>
+    
+    <!--大標-->
+    <div class="titletable tab">
+      <div class="tds-title"> 
+        <!--單元標題-->
+        <div class="maintitle">
+          <div class="icons">
+            <div class="lines"></div>
+          </div>
+          節目表 </div>
+      </div>
+      <div class="tds wh01">
+        <div class="btn_channel" ng-click="changeChannel();">
+        	<div class="btn">AM</div>
+            <div class="btn">FM</div>
+            <div class="hold"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!--星期-->
+    <div class="weeksbtn"><a href="javascript:;">選擇星期</a></div>
+    <div class="weeksbox">
+    	<a href="javascript:;" class="weekgrids" data-date="1" ng-click="changeProgramList(1,channel);">MON</a>
+        <a href="javascript:;" class="weekgrids" data-date="2" ng-click="changeProgramList(2,channel);">TUE</a>
+        <a href="javascript:;" class="weekgrids" data-date="3" ng-click="changeProgramList(3,channel);">WED</a>
+        <a href="javascript:;" class="weekgrids" data-date="4" ng-click="changeProgramList(4,channel);">THU</a>
+        <a href="javascript:;" class="weekgrids" data-date="5" ng-click="changeProgramList(5,channel);">FRI</a>
+        <a href="javascript:;" class="weekgrids" data-date="6" ng-click="changeProgramList(6,channel);">SAT</a>
+        <a href="javascript:;" class="weekgrids" data-date="0" ng-click="changeProgramList(0,channel);">SUN</a>
+    </div> 
+    
+    
+    <!--列表-->
+    <div class="gramtable" >
+    	<div class="trs">
+        	<div class="ths wh01">播放時間</div>
+            <div class="ths">節目名稱</div>
+            <div class="ths wh02">主持人</div>
+        </div>
+        <div class="trs" ng-repeat="program in programlist">
+            <div class="tds" data-time="playTime">{{program.playTime}}</div>
+            <div class="tds"><a ng-bind-html="program.programName | toTrusted" ng-href="program/detail/{{program.program_id}}"></a></div>
+            <div class="tds"><span ng-repeat="programHost in program.programHosts"><a href="host/detail/{{programHost.emceeID}}"><span ng-bind-html="programHost.emceeName | toTrusted"></span></a><span ng-hide="$last"> / </span></span></div>
+        </div>
+
+        <!--<div class="trs">-->
+        	<!--<div class="tds">08:00</div>-->
+            <!--<div class="tds">衛星直播英國BBC World Service<div class="gplay"><img src="/shrs_frontend/images/program/playicon_a.png" /></div></div>-->
+            <!--<div class="tds"></div>-->
+        <!--</div>-->
+
+    </div>
+    
+  </div>
+</div>

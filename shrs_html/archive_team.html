@@ -1,0 +1,35 @@
+<div category-select-js="/shrs_frontend/plugins/check_data/category_select.js"></div>
+<div class="contents bg_contact">
+  <div class="mar" ng-controller="archiveMemberController">
+    <!--麵包屑-->
+	<div class="nav"><a href="/">首頁</a> > <span class="unit">歷屆實習團隊</span></div>
+
+    <!--單元標題-->
+    <div class="maintitle"><i class="fa-solid fa-user-gear"></i>歷屆實習團隊</div>
+    
+    <!--詳細-->
+    <div class="indetaile_table" ng-repeat="member in members">
+      <div class="tdimg">
+        <div class="imgs"><img ng-src="{{member.picture}}" border="0"></div>
+      </div>
+      <div class="tddata">
+        <div class="etable">
+          <div class="etxt">
+            <div class="hostname" ng-bind-html="member.name | toTrusted"></div>
+          </div>
+          <!--<div class="fblink"><a href="#"><img src="/shrs_frontend/images/host/fb_icon.png" border="0" /></a></div>-->
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon06.png"></div>
+          <div class="etitle">稱謂</div>
+          <div class="etxt" ng-bind-html="member.appellation | toTrusted"></div>
+        </div>
+        <div class="etable">
+          <div class="eicon"><img src="/shrs_frontend/images/index/icon04.png"></div>
+          <div class="etitle">簡介</div>
+          <div class="etxt" ng-bind-html="member.introduce | toTrusted | nl2br"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "name": "angularjs-facebook-sdk",
+  "version": "1.1.0",
+  "main": "dist/angularjs-facebook-sdk.js",
+  "moduleType": [
+    "global"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1.6.4",
+    "highlightjs": "^9.10.0",
+    "cssreset": "^1.0.0",
+    "angular-route": "1.6.4"
+  },
+  "ignore": [
+    "bower_components",
+    "test",
+    "src",
+    "example",
+    "Gruntfile.js",
+    "karma-unit.conf.js",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    ".gitignore",
+    ".jshintrc",
+    ".editorconfig"
+  ],
+  "homepage": "https://github.com/wlepinski/angularjs-facebook-sdk",
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.0",
+    "commit": "66d3537f401198d7e8d4fb3422e737cba1c812b7"
+  },
+  "_source": "https://github.com/wlepinski/angularjs-facebook-sdk.git",
+  "_target": "^1.1.0",
+  "_originalSource": "angularjs-facebook-sdk",
+  "_direct": true
+}

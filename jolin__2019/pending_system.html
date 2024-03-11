@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--數字與地圖不被設置為預設電話與地圖-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="http://www.e-quit.org/images/jtf_logo.ico">
+    <title>2022我拒菸我驕傲後台審核系統</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/pending_system.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <span class="logo_name">2022我拒菸我驕傲後台審核系統</span>
+      </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25.271" height="22.112" viewBox="0 0 25.271 22.112">
+                  <path id="Icon_awesome-archive" data-name="Icon awesome-archive" d="M1.579,22.782a1.578,1.578,0,0,0,1.579,1.579H22.112a1.578,1.578,0,0,0,1.579-1.579V8.568H1.579Zm7.9-10.464a.594.594,0,0,1,.592-.592H15.2a.594.594,0,0,1,.592.592v.395a.594.594,0,0,1-.592.592H10.069a.594.594,0,0,1-.592-.592ZM23.691,2.25H1.579A1.578,1.578,0,0,0,0,3.829V6.2a.792.792,0,0,0,.79.79H24.481a.792.792,0,0,0,.79-.79V3.829A1.578,1.578,0,0,0,23.691,2.25Z" transform="translate(0 -2.25)" fill="#fff"/>
+                </svg>                                                       
+                <span class="links_name">所有作品</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.086" height="26.255" viewBox="0 0 16.086 26.255">
+                    <path id="Icon_awesome-hourglass-half" data-name="Icon awesome-hourglass-half" d="M15.08,0H1.005A1.135,1.135,0,0,0,0,1.231v.82A1.135,1.135,0,0,0,1.005,3.282c0,4.665,2.137,8.6,5.062,9.845-2.925,1.244-5.062,5.181-5.062,9.845A1.135,1.135,0,0,0,0,24.2v.82a1.135,1.135,0,0,0,1.005,1.231H15.08a1.135,1.135,0,0,0,1.005-1.231V24.2a1.135,1.135,0,0,0-1.005-1.231c0-4.665-2.137-8.6-5.062-9.845,2.925-1.244,5.062-5.181,5.062-9.845a1.135,1.135,0,0,0,1.005-1.231v-.82A1.135,1.135,0,0,0,15.08,0ZM11.935,19.691H4.15c.715-2.4,2.182-4.1,3.892-4.1S11.221,17.291,11.935,19.691Zm0-13.127H4.15a11.575,11.575,0,0,1-.464-3.282H12.4a11.577,11.577,0,0,1-.463,3.282Z" fill="#fff"/>
+                </svg>                  
+                <span class="links_name">待審核</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.112" height="22.112" viewBox="0 0 22.112 22.112">
+                  <path id="Icon_metro-cross" data-name="Icon metro-cross" d="M24.481,19.692h0l-6.708-6.708,6.708-6.708h0a.693.693,0,0,0,0-.977L21.312,2.13a.693.693,0,0,0-.977,0h0L13.627,8.838,6.919,2.13h0a.693.693,0,0,0-.977,0L2.773,5.3a.693.693,0,0,0,0,.977h0l6.708,6.708L2.773,19.692h0a.692.692,0,0,0,0,.977l3.169,3.169a.693.693,0,0,0,.977,0h0l6.708-6.708,6.708,6.708h0a.692.692,0,0,0,.977,0l3.169-3.169a.692.692,0,0,0,0-.977Z" transform="translate(-2.571 -1.928)" fill="#fff"/>
+                </svg>                              
+                <span class="links_name">未通過</span>
+            </a>
+          </li>
+          <!--li class="log_out">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28.932" height="25.316" viewBox="0 0 28.932 25.316">
+                <path id="Icon_open-account-logout" data-name="Icon open-account-logout" d="M10.85,0V3.617H25.316V21.7H10.85v3.617H28.932V0ZM7.233,7.233,0,12.658l7.233,5.425V14.466H21.7V10.85H7.233Z" fill="#fff"/>
+              </svg>              
+              <span class="links_name">登出</span>
+            </a>
+          </li-->
+        </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class='bx bx-menu sidebarBtn'></i>
+          <span class="dashboard">控制台</span>
+        </div>
+      </nav>
+
+      <div class="home-content">
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="upper_title">
+              <div class="title">待審核資料</div>
+              <button class="button-54">下載下列資料為Excel</button>
+            </div>
+            <div class="sales-details">
+              <table>
+                <thead>
+                  <tr>
+                    <th>作品id</th>
+                    <th>照片預覽</th>
+                    <th>年級</th>
+                    <th>審核狀態</th>
+                    <th id="grade_selector">
+                      <div>
+                        <select>
+                          <option>全部年級</option>
+                          <option>高年級</option>
+                          <option>中年級</option>
+                          <option>低年級</option>
+                        </select>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+
+                <!--tbody塞入資料範例-->
+                <tbody>
+                  <tr>
+                    <td>0001</td>
+                    <td><img src="images/keyvision.png"></td>
+                    <td>六年級</td>
+                    <td>待審核</td>
+                  </tr>
+                  <tr>
+                    <td>0003</td>
+                    <td><img src="images/qsfb_keyvision_sub.png"></td>
+                    <td>一年級</td>
+                    <td>待審核</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="pending_content">
+                <div class="left_content">
+                  <div class="image_wrapper">
+                    <img src="images/keyvision.png">
+                  </div>
+                  <!--h3>評分:</h3>
+                  <label>主題性(40%):</label>
+                  <input type="number" min="0" max="40">
+                  
+                  <label>創意巧思(40%):</label>
+                  <input type="number" min="0" max="40">
+
+                  <label>整體表現(30%):</label>
+                  <input type="number" min="0" max="30"-->
+                  
+                  <div class="GradeButter">
+                    <p id="pa">審核不通過</p>
+                    <p id="pe">待審核</p>
+                    <p id="nopa">審核通過</p>
+                  </div>
+                </div>
+                <div class="right_content">
+                  <div class="context">
+                    <h4>作品編號:</h4>
+                    <h4>年級:</h4>
+                    <h4>作品理念:</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('.nav-links li a').on('click', function() {
+        $('.nav-links li a').removeClass('active');
+        $(this).addClass('active');
+      })
+    </script>
+
+    <script>
+    // Get the modal
+        var modal = document.getElementById("myModal");
+  
+        // Get the button that opens the modal
+        var btn = document.querySelector(".sales-boxes .sales-details tbody tr");
+  
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+  
+        $(document).on("click", ".sales-boxes .sales-details tbody tr", function() {
+          modal.style.display = "block";
+        });
+  
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+  
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>
+

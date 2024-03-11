@@ -1,0 +1,90 @@
+<div class="contents bg_contact" ng-controller="linkController">
+  <div class="mar"> 
+    <!--麵包屑-->
+    <div class="nav"><a href="/">首頁</a> > <span class="unit">最愛連結</span></div>
+    
+    <!--單元標題-->
+        <div class="maintitle">
+          <div class="icons">
+            <div class="lines"></div>
+          </div>
+          最愛連結</div>
+     <!--連結列表-->
+     <div class="webbox" ng-repeat="link in links">
+
+         <div class="grids-100">
+             <a class="linktitles">{{ link.Name }}</a>
+             <a href="{{ content.URL }}" target="_blank" class="linktxt" ng-repeat="content in link.content">{{ content.Name }}</a>
+         </div>
+
+         <!--
+     	<div class="grids-100">
+        	<a class="linktitles">本台姐妹台(衛星直播節目)網站</a>
+           <a href="http://www.rfi.fr/" target="_blank" class="linktxt">法國之聲</a>
+           <a href="http://www.radioaustralia.net.au/international/" target="_blank" class="linktxt">澳洲廣播電台</a>
+           <a href="http://www.dw.com/en/top-stories/s-9097" target="_blank" class="linktxt">DW德國之聲</a>
+           <a href="http://www.bbc.co.uk/worldserviceradio" target="_blank" class="linktxt">BBC World Service</a>
+        </div>
+		
+        <div class="grids-100">
+        	<a class="linktitles">線上電台</a>
+            <a href="http://www.goodnews.org.tw/index.php" target="_blank" class="linktxt">佳音廣播電台</a>
+            <a href="http://www.radio.gov.taipei/" target="_blank" class="linktxt">台北電台</a>
+            <a href="http://www.news98.com.tw/" target="_blank" class="linktxt">News 98</a>
+			<a href="http://www.hitoradio.com/newweb/" target="_blank" class="linktxt">Hit Fm</a>
+            <a href="http://www.ner.gov.tw/" target="_blank" class="linktxt">教育廣播電台</a>
+            <a href="http://www.icrt.com.tw/" target="_blank" class="linktxt">台北國際社區電台-ICRT</a>
+			<a href="http://www.ufo.net.tw/" target="_blank" class="linktxt">飛碟聯播網</a>
+            <a href="http://www.hitoradio.com/newweb/" target="_blank" class="linktxt">台北之音</a>
+            <a href="http://www.csbc.com.tw/" target="_blank" class="linktxt">正聲廣播公司</a>
+			<a href="http://www.voh.com.tw/" target="_blank" class="linktxt">漢聲廣播電台</a>
+            <a href="http://www.pbs.gov.tw/cht/index.php?" target="_blank" class="linktxt">警察廣播電台</a>
+            <a href="http://www.bcc.com.tw/" target="_blank" class="linktxt">中國廣播公司</a>
+			<a href="http://www.rti.org.tw/" target="_blank" class="linktxt">中央廣播電台</a>
+            <a href="http://www.superfm99-1.com.tw/web991/" target="_blank" class="linktxt">大千廣播公司</a>
+            <a href="http://www.hakkaradio.org.tw/" target="_blank" class="linktxt">新客家廣播電臺</a>
+			<a href="http://www.asiafm.com.tw/" target="_blank" class="linktxt">亞洲調頻廣播網</a>
+            <a href="http://www.libraradio.com.tw/tw/" target="_blank" class="linktxt">非凡音聯播網</a>
+            <a href="http://www.heartradio.com.tw/" target="_blank" class="linktxt">真心之音全球網路廣播電臺</a>
+			<a href="http://www.frs.gov.tw/web/index_1060630.asp" target="_blank" class="linktxt">台灣區漁業廣播電臺</a>
+            <a href="http://www.kiss.com.tw/" target="_blank" class="linktxt">Kiss聯播網</a>
+            <a href="http://www.fm1025.com.tw/" target="_blank" class="linktxt">古都廣播電台</a>
+			<a href="http://www.fm995.com.tw/" target="_blank" class="linktxt">神農廣播電台</a>
+            <a href="http://www.sunny891.com.tw/" target="_blank" class="linktxt">非常太陽廣播公司</a>
+            <a href="http://www.fm987.com.tw/index.html" target="_blank" class="linktxt">每日廣播公司</a>
+			<a href="http://www.fm971.com.tw/" target="_blank" class="linktxt">大漢之音</a>
+            <a href="http://www.formosahakka.org.tw/" target="_blank" class="linktxt">寶島客家台</a>
+        </div>
+		
+        <div class="grids-100">
+        	<a class="linktitles">各大搜尋引擎</a>
+			<a href="http://www.openfind.com.tw/taiwan/" target="_blank" class="linktxt">網擎搜尋引擎</a>
+			<a href="https://www.yam.com/" target="_blank" class="linktxt">蕃薯藤</a>
+			<a href="https://www.google.com.tw/" target="_blank" class="linktxt">Google 搜尋引擎</a>
+			<a href="https://tw.yahoo.com/" target="_blank" class="linktxt">Yahoo!奇摩</a>
+        </div>
+		
+		<div class="grids-100">
+        	<a class="linktitles">北區校園實習電台</a>
+			<a href="http://radio.fju.edu.tw/" target="_blank" class="linktxt">輔仁大學-輔大之聲</a>
+			<a href="http://vota.ntua.edu.tw/" target="_blank" class="linktxt">台灣藝術大學-台藝之聲</a>
+			<a href="http://jou.pccu.edu.tw/fm885/" target="_blank" class="linktxt">文化大學-華岡電台</a>
+			<a href="http://votk.tku.edu.tw/" target="_blank" class="linktxt">淡江大學-淡江之聲</a>
+			<a href="#" target="_blank" class="linktxt">政治作戰學校-復興崗電台</a>
+			<a href="http://radio.mcu.edu.tw/" target="_blank" class="linktxt">銘傳大學-銘傳之聲</a>
+			<a href="http://www.vnccu.nccu.edu.tw/" target="_blank" class="linktxt">政治大學-政大之聲</a>
+        </div>
+
+        <div class="grids-100"> 
+        	<a class="linktitles">學校站台</a>
+            <a href="http://www.ntu.edu.tw/" target="_blank" class="linktxt">台灣大學</a>
+            <a href="http://www.nthu.edu.tw/" target="_blank" class="linktxt">清華大學</a>
+			<a href="http://www.ntpu.edu.tw/chinese/" target="_blank" class="linktxt">台北大學</a>
+			<a href="http://www.nccu.edu.tw/" target="_blank" class="linktxt">政治大學</a>
+			<a href="http://www.shu.edu.tw/" target="_blank" class="linktxt">世新大學</a>
+        </div>
+        -->
+        
+     </div> 
+  </div>
+</div>
