@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-C72BB2QS6N"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-C72BB2QS6N');
+		</script>
+		<meta lang="zh-Hant-TW">
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <!-- Bootstrap CSS -->
+	    <link class="title" rel="icon" type="image/ico" href="image/title.ico">
+	    <link rel="preconnect" href="https://fonts.gstatic.com">
+	    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;500;700&display=swap" rel="stylesheet">
+	    <link href="css/participant.css" rel="stylesheet">
+		<title>資傳107級畢業展人造風向</title>
+	</head>
+	<body>
+		<div class="loading" id="preloader">
+			<div class="wavy">
+				<span style="--i:1;">風</span>
+				<span style="--i:2;">向</span>
+				<span style="--i:3;">製</span>
+				<span style="--i:4;">造</span>
+				<span style="--i:5;">中</span>
+				<span style="--i:6;">.</span>
+				<span style="--i:7;">.</span>
+				<span style="--i:8;">.</span>
+			</div>
+		</div>
+	    <div class="menu">
+	  		<div class="data_wrapper">
+			  	<div class="menulogo">
+					<img src="https://imgur.com/EY1SJuB.png">
+				</div>
+
+			  	<div class="data">
+			  		<ul>
+						<li>
+							<a href="mainpage2.html">首頁</a>
+						</li>
+						<li>
+							<a href="ics.html">關於資傳</a>
+						</li>	
+						<li>
+							<a href="curator.html">策展人</a>
+						</li>
+						<li>
+							<a href="transportation.html">交通資訊</a>
+						</li>
+						<li>
+							<a href="map.html">展場地圖</a>
+						</li>
+						<li>
+							<a href="participant.html">參展作品</a>
+						</li>
+						<li>
+							<a href="news.html">最新風向</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<section>
+			<div class="bg"></div>
+			<div class="header">
+				<div class="burgerwrapper" onclick="show()">
+					<div class="rwdBurger">
+						<div class="item1"></div>
+						<div class="item2"></div>
+						<div class="item3"></div>
+					</div>
+				</div>
+
+				<div class="headerContainer" id="headerContainer">
+					<div class="logo">
+						<a href="mainpage2.html"><img src="https://imgur.com/EY1SJuB.png"></a>
+					</div>
+					<div class="mainNav">
+						<ul>
+							<li>
+								<a href="mainpage2.html">首頁</a>
+							</li>
+							<li>
+								<a href="ics.html">關於資傳</a>
+							</li>	
+							<li>
+								<a href="curator.html">策展人</a>
+							</li>
+							<li>
+								<a href="transportation.html">交通資訊</a>
+							</li>
+							<li>
+								<a href="map.html">展場地圖</a>
+							</li>
+							<li>
+								<a href="participant.html">參展作品</a>
+							</li>
+							<li>
+								<a href="news.html">最新風向</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="textBox">
+					<h2 id="title">人造風向</h2>
+					<p id="introduce">在廣大的網路風場中，真假訊息難辨，本團隊扣連網路社群引起的議題風向與引導輿論的社會現象，利用不同社群傳播管道引發群眾討論與反思，最終引領閱聽眾產生「新的觀點，新的風向」。
+					</p>
+				</div>
+
+				<ul class="sci">
+					<li><a href="https://www.facebook.com/ics.mediaframing" id="fb" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://www.instagram.com/107ics.media_framing/" id="ig" target="_blank"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="" id="yt" target="_blank"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="" id="pd" target="_blank"><i class="fas fa-podcast"></i></a></li>
+					<li><a href="" id="sp" target="_blank"><i class="fab fa-spotify"></i></a></li>
+					<li><a href="" id="line" target="_blank"><i class="fab fa-line"></i></a></li>
+					<li><a href="" id="web" target="_blank"><i class="fas fa-laptop-house"></i></a></li>				
+				</ul>
+				
+				<div class="imgBx">
+					<img src="image/mediaframing.png" class="logo">
+				</div>
+			</div>
+			<ul class="thumb">
+				<li data-text="Media Framing" class="active"><img src="image/mediaframing.png" onclick="imgSlider('image/mediaframing.png');changeBgColor('#5aa6a5');change_text1()"></li>
+				<li data-text="Farm In Love"><img src="image/farminlove.png" onclick="imgSlider('image/farminlove.png');changeBgColor('#b3bda2');change_text2()"></li>
+				<li data-text="Something Need To Know"><img src="image/something_need_to_know.png" onclick="imgSlider('image/something_need_to_know.png');changeBgColor('#DDB4B4');change_text3()"></li>
+				<li data-text="Social Crisis"><img src="image/socialcrisis.png" onclick="imgSlider('image/socialcrisis.png');changeBgColor('#4975A1');change_text4()"></li>
+				<li data-text="Time Capture"><img src="image/timecapture.png" onclick="imgSlider('image/timecapture.png');changeBgColor('#D8C4A9');change_text5()"></li>
+				<li data-text="Save And Sound"><img src="image/saveandsound.png" onclick="imgSlider('image/saveandsound.png');changeBgColor('#74736B');change_text6()"></li>
+				<li data-text="bē kì"><img src="image/beki.png" onclick="imgSlider('image/beki.png');changeBgColor('#C8BAAA');change_text7()"></li>
+				<li data-text="T.dot"><img src="image/tdot.png" onclick="imgSlider('image/tdot.png');changeBgColor('#AFCDD8');change_text8()"></li>
+				<li data-text="Cullet"><img src="image/cullet.png" onclick="imgSlider('image/cullet.png');changeBgColor('#D4D2A7');change_text9()"></li>
+				<li data-text="Temples island"><img src="image/templesisland.png" onclick="imgSlider('image/templesisland.png');changeBgColor('#A65C4F');change_text10()"></li>
+				<li data-text="Defensive driving"><img src="image/defensivedriving.png" onclick="imgSlider('image/defensivedriving.png');changeBgColor('#BD9F7A');change_text11()"></li>
+				<li data-text="Sink into phone"><img src="image/sinkintophone.png" onclick="imgSlider('image/sinkintophone.png');changeBgColor('#D8999E');change_text12()"></li>
+				<li data-text="Reverse by a ball"><img src="image/reversebyaball.png" onclick="imgSlider('image/reversebyaball.png');changeBgColor('#DB8662');change_text13()"></li>
+			</ul>
+
+			<div class="extend">
+				<p>查看更多組別</p>
+			</div>
+
+		</section>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://kit.fontawesome.com/bdca2f9925.js" crossorigin="anonymous"></script>
+		<script src="js/participant.js"></script>
+
+	</body>
+</html>

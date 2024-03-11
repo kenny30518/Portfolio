@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C72BB2QS6N"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-C72BB2QS6N');
+	</script>
+	<meta lang="zh-Hant-TW">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link class="title" rel="icon" type="image/ico" href="image/title.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+	<title>資傳107級畢業展人造風向</title>
+</head>
+<body id="top">
+	<div class="loading" id="preloader">
+		<div class="wavy">
+			<span style="--i:1;">風</span>
+			<span style="--i:2;">向</span>
+			<span style="--i:3;">製</span>
+			<span style="--i:4;">造</span>
+			<span style="--i:5;">中</span>
+			<span style="--i:6;">.</span>
+			<span style="--i:7;">.</span>
+			<span style="--i:8;">.</span>
+		</div>
+	</div>
+  	<div class="menu">
+  		<div class="data_wrapper">
+		  	<div class="menulogo">
+				<img src="https://imgur.com/EY1SJuB.png">
+			</div>
+
+		  	<div class="data">
+		  		<ul>
+					<li>
+						<a href="mainpage2.html">首頁</a>
+					</li>
+					<li>
+						<a href="ics.html">關於資傳</a>
+					</li>	
+					<li>
+						<a href="curator.html">策展人</a>
+					</li>
+					<li>
+						<a href="transportation.html">交通資訊</a>
+					</li>
+					<li>
+						<a href="map.html">展場地圖</a>
+					</li>
+					<li>
+						<a href="participant.html">參展作品</a>
+					</li>
+					<li>
+						<a href="news.html">最新風向</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+	<header>
+		<div class="header">
+			<div class="burgerwrapper" onclick="show()">
+				<div class="rwdBurger">
+					<div class="item1"></div>
+					<div class="item2"></div>
+					<div class="item3"></div>
+				</div>
+			</div>
+
+			<div class="headerContainer" id="headerContainer">
+				<div class="mainNav">
+					<ul>
+						<li>
+							<a href="mainpage2.html">首頁</a>
+						</li>
+						<li>
+							<a href="ics.html">關於資傳</a>
+						</li>	
+						<li>
+							<a href="curator.html">策展人</a>
+						</li>
+						<li>
+							<a href="transportation.html">交通資訊</a>
+						</li>
+						<li>
+							<a href="map.html">展場地圖</a>
+						</li>
+						<li>
+							<a href="participant.html">參展作品</a>
+						</li>
+						<li>
+							<a href="news.html">最新風向</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="floor">
+		<p id="firstFloor">1F</p>
+		<p id="secondFloor">B1</p>
+	</div>
+
+	<div class="mapWrapper">
+
+		<div class="upperWrapper">
+			<div class="leftTitle">
+				<h1>校外展</h1>
+				<h1>展場地圖</h1>
+			</div>
+
+			<div class="rightContent">
+				<h1>About exhibition</h1>
+				<p>本次展覽以「帶風向」為主軸，以「風向」的概念建構四大區域──紀實記憶、文化傳承、社會教育、創新論壇，串連12個獨立且與資訊傳播相關的主題。</p>
+			</div>
+
+			<div class="phoneFloor">
+				<p id="phoneFirstFloor" data-navigate="#phoneFirstFloor">1F</p>
+				<p id="phoneSecondFloor" data-navigate="#phoneSecondFloor">B1</p>
+			</div>
+		</div>
+
+		<div class="groupName" id="groupName">
+			<div class="upperGroup">
+				<a href="#groupName"><p class="button-6 groupTitle" id="culture">文化傳承</p></a>
+				<a href="#groupName"><p class="button-6 groupTitle" id="memory">紀實記憶</p></a>
+			</div>
+
+			<div class="lowerGroup">
+				<a href="#groupName"><p class="button-6 groupTitle" id="education">社會教育</p></a>
+				<a href="#groupName"><p class="button-6 groupTitle" id="forum">創新論壇</p></a>
+			</div>
+		</div>
+
+		<div class="map" id="map">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757.78 718.19"><defs><style>.cls-1{fill:#fbeed7;}.cls-2{fill:#63564d;}.cls-3{fill:#faedd6;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_2-2" data-name="圖層 2"><rect class="cls-1" x="3.08" y="3.08" width="751.62" height="712.04"/><path class="cls-2" d="M754.7,712.12H33.59c-9.63,0-19.63-.78-29.23,0-.42,0-.86,0-1.28,0l3,3V13.74c0-3.1.29-6.37,0-9.46,0-.4,0-.81,0-1.2l-3,3H724.19c9.62,0,19.62.78,29.23,0,.42,0,.85,0,1.28,0l-3-3V686.22c0,9.23-.19,18.47,0,27.7,0,.4,0,.8,0,1.2,0,3.85,6,3.86,6,0V32c0-9.22.19-18.47,0-27.69,0-.4,0-.8,0-1.2a3,3,0,0,0-3-3H33.59c-9.74,0-19.5-.18-29.23,0H3.08a3,3,0,0,0-3,3V686.22c0,9.23-.2,18.47,0,27.7v1.2a3,3,0,0,0,3,3H724.19c9.73,0,19.49.18,29.23,0h1.28C758.55,718.11,758.56,712.12,754.7,712.12Z"/><a href="#popup" class="btn1" id="drive"><rect id="driveColor" class="cls-1 educationArea" x="68.05" y="3.08" width="207.23" height="94.01"/></a><path class="cls-2" d="M275.28,94.05H76.47c-2.68,0-5.39-.11-8.08,0-.11,0-.22,0-.34,0l3,3V6.94c0-1.22.09-2.48,0-3.69V3.08l-3,3H266.86c2.68,0,5.39.11,8.07,0,.12,0,.23,0,.35,0l-3-3V85.49c0,3.8-.13,7.63,0,11.42a1.08,1.08,0,0,1,0,.18c0,3.9,6.07,3.9,6.07,0V14.67c0-3.8.14-7.63,0-11.42V3.08a3.08,3.08,0,0,0-3-3H76.47c-2.69,0-5.39,0-8.08,0-.11,0-.22,0-.34,0a3.08,3.08,0,0,0-3,3V85.49c0,3.8-.14,7.63,0,11.42v.18a3.08,3.08,0,0,0,3,3H266.86c2.69,0,5.38,0,8.07,0h.35C279.18,100.12,279.18,94.05,275.28,94.05Z"/><a href="#popup" class="btn1" id="social"><rect  id="socialColor" class="cls-1 educationArea" x="275.28" y="3.08" width="207.23" height="94.01"/></a><path class="cls-2" d="M482.5,94.05H283.69c-2.68,0-5.39-.11-8.07,0-.11,0-.23,0-.34,0l3,3V6.94c0-1.22.09-2.48,0-3.69a1,1,0,0,1,0-.17l-3,3h198.8c2.69,0,5.4.11,8.08,0,.11,0,.23,0,.34,0l-3-3V85.49c0,3.8-.14,7.63,0,11.43v.17c0,3.9,6.06,3.9,6.06,0V14.67c0-3.8.14-7.63,0-11.42V3.08a3.08,3.08,0,0,0-3-3H283.69c-2.68,0-5.38,0-8.07,0-.11,0-.23,0-.34,0a3.08,3.08,0,0,0-3,3V85.49c0,3.8-.13,7.63,0,11.42a1.08,1.08,0,0,1,0,.18,3.08,3.08,0,0,0,3,3h198.8c2.69,0,5.39,0,8.08,0h.34C486.4,100.12,486.41,94.05,482.5,94.05Z"/><a href="#popup" class="btn1" id="grow"><rect id="growColor" class="cls-1 educationArea" x="482.5" y="3.08" width="207.23" height="94.01"/></a><path class="cls-2" d="M689.73,94.05H490.92c-2.68,0-5.39-.11-8.07,0-.12,0-.23,0-.35,0l3,3V6.94c0-1.22.09-2.48,0-3.69V3.08l-3,3H681.31c2.68,0,5.39.11,8.07,0,.12,0,.23,0,.35,0l-3-3V85.49c0,3.8-.13,7.63,0,11.43a1,1,0,0,1,0,.17c0,3.9,6.07,3.9,6.07,0V14.67c0-3.8.14-7.63,0-11.42V3.08a3.08,3.08,0,0,0-3-3H490.92c-2.69,0-5.39,0-8.07,0-.12,0-.23,0-.35,0a3.08,3.08,0,0,0-3,3V85.49c0,3.8-.14,7.63,0,11.43v.17a3.08,3.08,0,0,0,3,3H681.31c2.69,0,5.38,0,8.07,0h.35C693.63,100.12,693.64,94.05,689.73,94.05Z"/><a href="#popup" class="btn1" id="sink"><rect id="sinkColor" class="cls-1 educationArea" x="101.13" y="621.11" width="207.23" height="94.01"/></a><path class="cls-2" d="M308.36,712.08H109.55c-2.68,0-5.39-.11-8.07,0h-.35l3,3V625c0-1.22.09-2.48,0-3.69a1,1,0,0,1,0-.17l-3,3H299.94c2.68,0,5.39.11,8.07,0h.35l-3-3v82.41c0,3.8-.14,7.63,0,11.43v.17c0,3.9,6.06,3.91,6.06,0V632.7c0-3.8.14-7.62,0-11.42v-.17a3.08,3.08,0,0,0-3-3H109.55c-2.69,0-5.38-.05-8.07,0h-.35a3.08,3.08,0,0,0-3,3v82.41c0,3.8-.14,7.63,0,11.43v.17a3.07,3.07,0,0,0,3,3H299.94c2.69,0,5.39.06,8.07,0h.35C312.26,718.15,312.27,712.08,308.36,712.08Z"/><a href="#popup" class="btn1" id="cullet"><rect id="culletColor" class="cls-1 forumArea" x="308.36" y="621.11" width="207.23" height="94.01"/></a><path class="cls-2" d="M515.58,712.08H316.78c-2.69,0-5.4-.11-8.08,0h-.34l3,3V625c0-1.22.09-2.48,0-3.69v-.17l-3,3H507.17c2.68,0,5.39.11,8.07,0h.34l-3-3v82.41c0,3.8-.14,7.63,0,11.43v.17c0,3.9,6.07,3.91,6.07,0V632.7c0-3.8.13-7.62,0-11.42a1,1,0,0,1,0-.17,3.08,3.08,0,0,0-3-3H316.78c-2.69,0-5.39-.06-8.08,0h-.34a3.07,3.07,0,0,0-3,3v82.41c0,3.8-.14,7.63,0,11.43v.17a3.07,3.07,0,0,0,3,3H507.17c2.68,0,5.38.06,8.07,0h.34C519.49,718.15,519.49,712.08,515.58,712.08Z"/><a href="#popup" class="btn1" id="tdot"><rect id="tdotColor" class="cls-1 forumArea" x="515.58" y="621.11" width="207.23" height="94.01"/></a><path class="cls-2" d="M722.81,712.08H524c-2.68,0-5.39-.11-8.07,0h-.35l3,3V625c0-1.22.09-2.48,0-3.69a1,1,0,0,1,0-.17l-3,3H714.39c2.68,0,5.39.11,8.07,0h.35l-3-3v82.41c0,3.8-.14,7.63,0,11.43v.17c0,3.9,6.06,3.91,6.06,0V632.7c0-3.8.14-7.62,0-11.42v-.17a3.07,3.07,0,0,0-3-3H524c-2.69,0-5.38-.06-8.07,0h-.35a3.07,3.07,0,0,0-3,3v82.41c0,3.8-.14,7.63,0,11.43v.17a3.07,3.07,0,0,0,3,3H714.39c2.69,0,5.39.06,8.07,0h.35C726.71,718.15,726.72,712.08,722.81,712.08Z"/><polygon class="cls-1" points="298.76 318.27 298.76 400.36 3.08 400.36 3.08 317.83 298.76 318.27"/><path class="cls-2" d="M295.8,318.27v82.09l3-3H15.08c-3.82,0-7.68-.15-11.5,0-.16,0-.33,0-.5,0l3,3V317.83l-3,3h8l21.45,0,31.93.05,38.68.06,42.66.06,42.77.07,40.15.06,33.7.05,24.4,0c3.83,0,7.66.08,11.49,0h.5c3.81,0,3.81-5.91,0-5.92h-7.95l-21.45,0-31.93,0-38.68-.06-42.66-.06L113.32,315,73.17,315l-33.7-.05-24.4,0c-3.83,0-7.66-.08-11.49,0h-.5a3,3,0,0,0-3,3v82.53a3,3,0,0,0,3,3H286.76c3.83,0,7.66.07,11.5,0h.5a3,3,0,0,0,3-3V318.27C301.72,314.46,295.8,314.46,295.8,318.27Z"/><line class="cls-1" x1="23.66" y1="318.19" x2="23.66" y2="400.36"/><path class="cls-2" d="M20.63,318.19v82.17c0,3.91,6.07,3.91,6.07,0V318.19c0-3.9-6.07-3.91-6.07,0Z"/><line class="cls-1" x1="44.89" y1="318.19" x2="44.89" y2="400.36"/><path class="cls-2" d="M41.86,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="66.12" y1="318.19" x2="66.12" y2="400.36"/><path class="cls-2" d="M63.09,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="87.35" y1="318.19" x2="87.35" y2="400.36"/><path class="cls-2" d="M84.32,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="108.58" y1="318.19" x2="108.58" y2="400.36"/><path class="cls-2" d="M105.54,318.19v82.17c0,3.91,6.07,3.91,6.07,0V318.19c0-3.9-6.07-3.91-6.07,0Z"/><line class="cls-1" x1="129.8" y1="318.19" x2="129.8" y2="400.36"/><path class="cls-2" d="M126.77,318.19v82.17c0,3.91,6.07,3.91,6.07,0V318.19c0-3.9-6.07-3.91-6.07,0Z"/><line class="cls-1" x1="151.03" y1="318.19" x2="151.03" y2="400.36"/><path class="cls-2" d="M148,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="172.26" y1="318.19" x2="172.26" y2="400.36"/><path class="cls-2" d="M169.23,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="193.49" y1="318.19" x2="193.49" y2="400.36"/><path class="cls-2" d="M190.46,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="214.72" y1="318.19" x2="214.72" y2="400.36"/><path class="cls-2" d="M211.68,318.19v82.17c0,3.91,6.07,3.91,6.07,0V318.19c0-3.9-6.07-3.91-6.07,0Z"/><line class="cls-1" x1="235.94" y1="318.19" x2="235.94" y2="400.36"/><path class="cls-2" d="M232.91,318.19v82.17c0,3.91,6.07,3.91,6.07,0V318.19c0-3.9-6.07-3.91-6.07,0Z"/><line class="cls-1" x1="257.17" y1="318.19" x2="257.17" y2="400.36"/><path class="cls-2" d="M254.14,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><line class="cls-1" x1="278.4" y1="318.19" x2="278.4" y2="400.36"/><path class="cls-2" d="M275.37,318.19v82.17c0,3.91,6.06,3.91,6.06,0V318.19c0-3.9-6.06-3.91-6.06,0Z"/><rect class="cls-3" x="298.86" y="269.78" width="63.59" height="48.16"/><path class="cls-2" d="M362.45,266.86H298.86a3,3,0,0,0-2.91,2.92v48.16a3,3,0,0,0,2.91,2.91h63.59a3,3,0,0,0,2.92-2.91V269.78c0-3.76-5.83-3.76-5.83,0v48.16l2.91-2.92H298.86l2.92,2.92V269.78l-2.92,2.91h63.59C366.21,272.69,366.21,266.86,362.45,266.86Z"/></g></g></svg>
+		</div>
+
+		<div class="map2" id="map2">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790.18 691.17"><defs><style>.cls-1{fill:#fdf0d8;}.cls-2{fill:#63564e;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="圖層_2-2" data-name="圖層 2"><rect class="cls-1" x="3.09" y="3.08" width="784" height="685"/><path class="cls-2" d="M787.09,685.08H34.92c-10,0-20.49-.83-30.5,0-.43,0-.89,0-1.33,0l3,3V13.35a87.08,87.08,0,0,0,0-9.14,10.65,10.65,0,0,1,0-1.13l-3,3H755.27c10,0,20.48.84,30.49,0,.44,0,.89,0,1.33,0l-3-3V660.3c0,8.88-.2,17.78,0,26.65,0,.38,0,.76,0,1.13,0,3.86,6,3.87,6,0V30.87c0-8.88.21-17.78,0-26.66,0-.37,0-.75,0-1.13a3,3,0,0,0-3-3H34.92C24.76.08,14.58-.1,4.42.08H3.09a3,3,0,0,0-3,3V660.3c0,8.88-.2,17.78,0,26.65,0,.38,0,.76,0,1.13a3,3,0,0,0,3,3H755.27c10.15,0,20.33.19,30.49,0h1.33C791,691.08,791,685.08,787.09,685.08Z"/><a href="#popup" class="btn1" id="ball"><rect id="ballColor" class="cls-1 memoryArea" x="3.09" y="3.08" width="205" height="93"/></a><path class="cls-2" d="M208.09,93.08H11.44c-2.66,0-5.35-.12-8,0-.12,0-.23,0-.35,0l3,3V6.89c0-1.2.09-2.45,0-3.65V3.08l-3,3H199.74c2.66,0,5.35.13,8,0h.35l-3-3V84.61c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V14.56c0-3.76.14-7.55,0-11.32V3.08a3,3,0,0,0-3-3H11.44c-2.66,0-5.34,0-8,0H3.09a3,3,0,0,0-3,3V84.61c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H199.74c2.67,0,5.34.06,8,0h.35C212,99.08,212,93.08,208.09,93.08Z"/><a href="#popup" class="btn1" id="time"><rect id="timeColor" class="cls-1 memoryArea" x="208.09" y="3.08" width="205" height="93"/></a><path class="cls-2" d="M413.09,93.08H216.43c-2.65,0-5.34-.12-8,0-.12,0-.23,0-.35,0l3,3V6.89c0-1.2.09-2.45,0-3.65V3.08l-3,3H404.75c2.66,0,5.34.13,8,0h.35l-3-3V84.61c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V14.56c0-3.76.14-7.55,0-11.32V3.08a3,3,0,0,0-3-3H216.43c-2.66,0-5.33,0-8,0h-.35a3,3,0,0,0-3,3V84.61c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H404.75c2.67,0,5.33.06,8,0h.35C417,99.08,417,93.08,413.09,93.08Z"/><a class="btn1" id="farm" href="#popup"><rect id="farmColor" class="cls-1 memoryArea" x="413.09" y="3.08" width="205" height="93"/></a><path class="cls-2" d="M618.09,93.08H421.44c-2.66,0-5.35-.12-8,0-.12,0-.23,0-.35,0l3,3V6.89c0-1.2.09-2.45,0-3.65V3.08l-3,3H609.74c2.66,0,5.35.13,8,0h.35l-3-3V84.61c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V14.56c0-3.76.14-7.55,0-11.32V3.08a3,3,0,0,0-3-3H421.44c-2.66,0-5.34,0-8,0h-.35a3,3,0,0,0-3,3V84.61c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H609.74c2.67,0,5.34.06,8,0h.35C622,99.08,622,93.08,618.09,93.08Z"/><a href="#popup" class="btn1" id="beki"><rect id="bekiColor" class="cls-1 cultureArea" x="3.09" y="595.08" width="205" height="93"/></a><path class="cls-2" d="M208.09,685.08H11.44c-2.66,0-5.35-.12-8,0H3.09l3,3V598.89c0-1.2.09-2.45,0-3.65v-.16l-3,3H199.74c2.66,0,5.35.13,8,0h.35l-3-3v81.53c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V606.56c0-3.76.14-7.55,0-11.32v-.16a3,3,0,0,0-3-3H11.44c-2.66,0-5.34-.05-8,0H3.09a3,3,0,0,0-3,3v81.53c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H199.74c2.67,0,5.34.06,8,0h.35C212,691.08,212,685.08,208.09,685.08Z"/><a href="#popup" class="btn1" id="temple"><rect id="templeColor" class="cls-1 cultureArea" x="305.09" y="595.08" width="205" height="93"/></a><path class="cls-2" d="M510.09,685.08H313.44c-2.66,0-5.35-.12-8,0h-.35l3,3V598.89c0-1.2.09-2.45,0-3.65v-.16l-3,3H501.74c2.66,0,5.35.13,8,0h.35l-3-3v81.53c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V606.56c0-3.76.14-7.55,0-11.32v-.16a3,3,0,0,0-3-3H313.44c-2.66,0-5.34-.05-8,0h-.35a3,3,0,0,0-3,3v81.53c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H501.74c2.67,0,5.34.06,8,0h.35C514,691.08,514,685.08,510.09,685.08Z"/><a href="#popup" class="btn1" id="sound"><rect id="soundColor" class="cls-1 cultureArea" x="510.09" y="595.08" width="205" height="93"/></a><path class="cls-2" d="M715.09,685.08H518.44c-2.66,0-5.35-.12-8,0h-.35l3,3V598.89c0-1.2.09-2.45,0-3.65v-.16l-3,3H706.74c2.66,0,5.35.13,8,0h.35l-3-3v81.53c0,3.76-.14,7.55,0,11.31v.16c0,3.86,6,3.87,6,0V606.56c0-3.76.14-7.55,0-11.32v-.16a3,3,0,0,0-3-3H518.44c-2.66,0-5.34-.05-8,0h-.35a3,3,0,0,0-3,3v81.53c0,3.76-.14,7.55,0,11.31v.16a3,3,0,0,0,3,3H706.74c2.67,0,5.34.06,8,0h.35C719,691.08,719,685.08,715.09,685.08Z"/><rect class="cls-1" x="131.09" y="239.16" width="379" height="164.03"/><path class="cls-2" d="M510.09,400.18H146.48c-4.9,0-9.86-.24-14.74,0h-.65l3,3V245.84a61.91,61.91,0,0,0,0-6.39,2.8,2.8,0,0,1,0-.29l-3,3H494.71c4.89,0,9.85.23,14.74,0h.64l-3-3V383c0,6.61-.26,13.29,0,19.9a2.81,2.81,0,0,1,0,.29c0,3.86,6,3.87,6,0V259.35c0-6.62.26-13.29,0-19.9v-.29a3,3,0,0,0-3-3H146.48c-4.91,0-9.83-.09-14.74,0h-.65a3,3,0,0,0-3,3V383c0,6.61-.26,13.29,0,19.9a2.81,2.81,0,0,1,0,.29,3,3,0,0,0,3,3H494.71c4.91,0,9.83.09,14.74,0h.64C514,406.18,514,400.18,510.09,400.18Z"/><rect class="cls-1" x="438.09" y="239.08" width="72" height="50.71"/><path class="cls-2" d="M438.09,292.79h72a3,3,0,0,0,3-3V239.08a3,3,0,0,0-3-3h-72a3,3,0,0,0-3,3v50.71c0,3.86,6,3.87,6,0V239.08l-3,3h72l-3-3v50.71l3-3h-72C434.23,286.79,434.22,292.79,438.09,292.79Z"/><polygon class="cls-1" points="438.09 289.88 438.09 371.08 131.09 371.08 131.09 289.44 438.09 289.88"/><path class="cls-2" d="M435.09,289.87v81.21l3-3H143.54c-4,0-8-.16-11.93,0h-.52l3,3V289.43l-3,3,8.26,0,22.27,0,33.15,0,40.16.05,44.29.07,44.41.06,41.69.06,35,.05,25.34,0c4,0,8,.08,11.92,0h.52c3.86,0,3.87-6,0-6h-8.26l-22.27,0-33.14-.05-40.17,0L290,286.66l-44.41-.06-41.68-.06-35-.05-25.33,0c-4,0-8-.08-11.93,0h-.52a3,3,0,0,0-3,3v81.65a3,3,0,0,0,3,3H425.65c4,0,8,.07,11.92,0h.52a3,3,0,0,0,3-3V289.87C441.09,286,435.09,286,435.09,289.87Z"/><line class="cls-1" x1="151.45" y1="289.79" x2="151.45" y2="371.08"/><path class="cls-2" d="M148.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="172.45" y1="289.79" x2="172.45" y2="371.08"/><path class="cls-2" d="M169.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="193.45" y1="289.79" x2="193.45" y2="371.08"/><path class="cls-2" d="M190.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="214.45" y1="289.79" x2="214.45" y2="371.08"/><path class="cls-2" d="M211.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="235.45" y1="289.79" x2="235.45" y2="371.08"/><path class="cls-2" d="M232.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="256.45" y1="289.79" x2="256.45" y2="371.08"/><path class="cls-2" d="M253.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="277.45" y1="289.79" x2="277.45" y2="371.08"/><path class="cls-2" d="M274.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="298.45" y1="289.79" x2="298.45" y2="371.08"/><path class="cls-2" d="M295.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="319.45" y1="289.79" x2="319.45" y2="371.08"/><path class="cls-2" d="M316.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="340.45" y1="289.79" x2="340.45" y2="371.08"/><path class="cls-2" d="M337.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="361.45" y1="289.79" x2="361.45" y2="371.08"/><path class="cls-2" d="M358.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="382.45" y1="289.79" x2="382.45" y2="371.08"/><path class="cls-2" d="M379.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/><line class="cls-1" x1="403.45" y1="289.79" x2="403.45" y2="371.08"/><path class="cls-2" d="M400.45,289.79v81.29c0,3.86,6,3.87,6,0V289.79c0-3.86-6-3.86-6,0Z"/></g></g></svg>
+		</div>
+	</div>
+
+	<div class="popup-wrap" id="popup">
+		<div class="popup-box transform-out">
+			<a class="close-btn popup-close" href="#">x</a>
+			<div class="contentWrapper">
+				<div class="tour">
+					<div class="intro">
+						<div class="name">
+							<h2 class="chineseName">蔬情</h2> 
+							<h2 class="englishName">Farm In Love</h2>
+						</div>
+						<p class="chineseText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation u.</p>
+						<p class="englishText"></p>
+					</div>
+					<!--div class="lang">
+						<p class="chinese" onclick="playTour(audioC)">中文導覽</p>
+						<p class ="english" onclick="playTour(audioE)">English Tour</p>
+					</div>
+					<div class="audio">
+						<audio id="audioC" src="audio/sample.mp3"></audio>			
+						<audio id="audioE" src="audio/wave.mp3"></audio>
+					</div-->
+				</div>
+				<div class="leftSide">
+					<div class="logo">
+						<img src="image/farminlove.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="content">
+			<div class="top">
+				<ul>
+					<li>
+						<a href="https://www.shu.edu.tw/" target="_blank">
+							<img src="https://i.imgur.com/aSWCkCP.png" class="school">
+						</a>
+					</li>
+					<li>
+						<a href="http://ics.wp.shu.edu.tw/" target="_blank">
+							<img src="https://i.imgur.com/OHQB7V7.png" class="ICS">
+						</a>
+					</li>					
+					<li>
+						<div class="social-media">
+							<a href="https://www.facebook.com/ics.mediaframing" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/107ics.media_framing/" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="https://linktr.ee/MediaFraming" target="_blank"><img src="image/linktree.png"></a>
+						</div>
+					</li>
+					<div class="copyrights">
+						<P>世新資傳107級人造風向策展組 版權所有</P>
+						<p>Copyright &#169; 2021 Media Framing. All rights reserved</p>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/bdca2f9925.js" crossorigin="anonymous"></script>
+	<script src="js/map.js"></script>
+</body>
